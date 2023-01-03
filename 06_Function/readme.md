@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程: 4. function
+# WTF JavaScript 极简教程: 6. function
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -42,7 +42,7 @@ let sum = function(num1,num2){
 
 函数表达式与函数声明几乎一样，唯一的区别就是与函数声明相比，`sum`被提到前面作为变量（也可以理解成指针）指向这个函数，该函数可以通过变量`sum`来引用。
 
-`=`后边的函数我们把它称为`匿名函数`
+`=`后边的函数我们把它称为`匿名函数`。
 
 ### 箭头函数（arrow function）
 
@@ -75,7 +75,7 @@ let sum = (num1,num2) => {return num1 + num2} //多个参数需要括号
 let sum = num1,num2 => {return num1 + num2} // 错误的写法
 ```
 
-箭头函数的大括号也可以省略，如果不使用大括号，那么箭头后面就只能有一行代码，并且如果这行代码有值的话会被隐式返回
+箭头函数的大括号也可以省略，如果不使用大括号，那么箭头后面就只能有一行代码，并且如果这行代码有值的话会被隐式返回。
 
 ```javascript
 let double = x => x * 2 //返回x的2倍
@@ -174,7 +174,7 @@ obj.sayHello() // {sayHello：f}
 
 ![](./img/6-5.png)
 
-2. 当一个函数被直接调用时，`this`存储的是`window`
+2. 当一个函数被直接调用时，`this`存储的是`window`。
 
 ```javascript
 const sayHello = function(){
