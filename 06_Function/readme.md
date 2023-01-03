@@ -150,18 +150,18 @@ ft1(ft2)
 函数作为参数最为典型的例子便是回调函数。
 
 ```javascript
-  contractUSDT.on('Transfer', (from, to, value)=>{
+contractUSDT.on('Transfer', (from, to, value)=>{
     console.log(from, to, value)
-  })
+})
 ```
 
 在上面这个例子中，`on`函数有两个参数，第一个是字符串`'Transfer'`，第二个是箭头函数。该函数保持对USDT合约的监听，一旦发生`Transfer`事件便会调用后续的箭头函数打印出`from`、`to`和`value`。
 
 ## this
 
-函数中存在一个特殊的属性`this`，`this`存储的是一个对象，这个对象由函数调用方式来决定。
+函数中存在一个特殊的对象`this`，`this`引用的是一个对象，这个对象由函数调用方式来决定。
 
-1. 当一个函数被当成一个对象的方法去调用时，`this`存储的就是这个对象。
+1. 当一个函数被当成一个对象的方法去调用时，`this`指向的就是这个对象。
 
 ```javascript
 const obj = {
@@ -174,7 +174,7 @@ obj.sayHello() // {sayHello：f}
 
 ![](./img/6-5.png)
 
-2. 当一个函数被直接调用时，`this`存储的是`window`。
+2. 当一个函数被直接调用时，`this`指向的是`window`。
 
 ```javascript
 const sayHello = function(){
