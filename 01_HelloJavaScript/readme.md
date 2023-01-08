@@ -27,14 +27,13 @@ JavaScript 是一种用于与网页元素交互的轻量型编程语言。前端
 
 ![](./img/1-2.png)
 
-[playcode](https://playcode.io/)是一个在线编译`javascript`的平台，你不需要在本地安装任何程序就可以运行`.js`文件，非常方便。本教程将使用 playcode 进行代码演示，未来也将在 [wtf.academy]
-(https://wtf.academy) 的教程中嵌入可互动代码模块。你可以在[链接](https://playcode.io/1051873)上找到这一讲的代码。
+[playcode](https://playcode.io/)是一个在线编译`javascript`的平台，你不需要在本地安装任何程序就可以运行`.js`文件，非常方便。本教程将使用 playcode 进行代码演示，未来也将在 [wtf.academy](https://wtf.academy) 的教程中嵌入可互动代码模块。你可以在[链接](https://playcode.io/1051873)上找到这一讲的代码。
 
 ![](./img/1-3.png)
 
-### 2. VScode
+### 2. VS Code
 
-你可以使用本地 [VScode](https://code.visualstudio.com/download) 进行开发，需要安装[Node.js](https://nodejs.org/zh-cn/download/)，我们会在之后的章节介绍如何使用它。
+你可以使用本地 [VS Code](https://code.visualstudio.com/download) 进行开发，需要安装[Node.js](https://nodejs.org/zh-cn/download/)，我们会在之后的章节介绍如何使用它。
 
 ## Hello JavaScript!
 
