@@ -198,7 +198,7 @@ while (i < 3) {
 
 ```js
 while (true) {
-  console.log('Hello, WTF JS')
+  console.log('Hello, WTF JavaScript')
 }
 ```
 
@@ -257,7 +257,7 @@ for (let i = 0; i < 3; i++) {
 
 ```js
 for (;;) {
-  console.log('Hello, WTF JS')
+  console.log('Hello, WTF JavaScript')
 }
 ```
 
@@ -355,6 +355,31 @@ outPoint: for (let i = 0; i < 10; i++) {
 
 console.log(n) // 55
 ```
+
+## 习题
+
+1. 将下面 `switch` 结构的代码写成 `if..else` 结构：
+
+```js
+const name = 'JavaScript'
+
+switch (name) {
+  case 'Solidity':
+    console.log('Hello, WTF Solidity!')
+    break
+
+  case 'HTML':
+  case 'CSS':
+  case 'JavaScript':
+    console.log('Hello, WTF Web!')
+    break
+
+  default:
+    console.log('Hello, WTF Academy!')
+}
+```
+
+2. 使用任意循环输出 10 以内的偶数。
 
 ## 总结
 
