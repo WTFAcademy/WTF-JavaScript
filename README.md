@@ -18,6 +18,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 ## 目录
 **第1讲：Hello JavaScript（2行代码）**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/01_HelloJavaScript/HelloJavaScript.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/01_HelloJavaScript/readme.md)】【[PlayCode](https://playcode.io/1051873)】
 
+**第2讲：变量声明**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/02_Declaration/Declaration.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/02_Declaration/readme.md)】【[PlayCode](https://playcode.io/1058216)】
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">

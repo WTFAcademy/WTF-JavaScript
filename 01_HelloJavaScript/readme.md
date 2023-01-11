@@ -1,5 +1,6 @@
 # JavaScript极简入门: 1. Hello JavaScript (2行代码)
 
+WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 **推特**：[@WTFAcademy_](https://twitter.com/WTFAcademy_) ｜ [@0xAA_Science](https://twitter.com/0xAA_Science)
 
