@@ -16,8 +16,3 @@ age = 20;
 // var （不推荐）
 // 声明 variable 变量并赋值 "hello"
 var variable = "hello"
-
-// 习题
-const fruit = 'apple'
-fruit = 'orange'
-console.log(fruit)

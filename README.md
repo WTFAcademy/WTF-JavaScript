@@ -20,6 +20,9 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第2讲：变量声明**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/02_Declaration/Declaration.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/02_Declaration/readme.md)】【[PlayCode](https://playcode.io/1058216)】
 
+**第3讲：常用类型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/03_CommonTypes/CommonTypes.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/03_CommonTypes/readme.md)】【[PlayCode](https://playcode.io/1059248)】
+
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">
