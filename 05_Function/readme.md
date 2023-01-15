@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程: 6. function
+# WTF JavaScript 极简教程: 5. function
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -76,7 +76,7 @@ let print = x => console.log(x) //返回undefined
 
 使用不带括号的函数名会返回该函数，带上括号后才会执行该函数。
 
-![](./img/4-1.png)
+![](./img/5-1.png)
 
 ## 函数的参数
 
@@ -92,7 +92,7 @@ function sum1(num1) {
 }
 ```
 
-![](./img/4-2.png)
+![](./img/5-2.png)
 
 ### 实参
 
@@ -102,7 +102,7 @@ function sum1(num1) {
 2. 如果实参比形参多，那么多余的实参不会被使用。
 3. 如果形参比实参多，那么多余的形参为`undefined`，也就是未被赋值。
 
-![](./img/4-3.png)
+![](./img/5-3.png)
 
 ### 函数也可以作为参数
 
@@ -116,7 +116,7 @@ function ft2(){
 ft1(ft2)
 ```
 
-![](./img/4-4.png)
+![](./img/5-4.png)
 
 ## 总结
 
