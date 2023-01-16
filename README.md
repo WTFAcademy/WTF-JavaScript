@@ -22,6 +22,7 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第3讲：常用类型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/03_CommonTypes/CommonTypes.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/03_CommonTypes/readme.md)】【[PlayCode](https://playcode.io/1059248)】
 
+**第3讲：运算符**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/04_Operators/Operators.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/04_Operators/readme.md)】【[PlayCode](https://playcode.io/1061414)】
 
 ## WTF JavaScript贡献者
 <div align="center">
