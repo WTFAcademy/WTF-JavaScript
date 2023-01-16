@@ -84,7 +84,7 @@ console.log(x, y, z) // 3, 1, 3
 - 大于 `>`: `x > y`
 - 小于 `<`: `x < y`
 - 大于等于 `>=`: `x >= y`
-- 小于等于 `>`: `x <= y`
+- 小于等于 `<=`: `x <= y`
 - 严格相等 `===`（推荐使用）: `x === y`
 - 严格不相等 `!==`（推荐使用）: `x !== y`
 
@@ -97,7 +97,7 @@ let bool2 = (x != y); // true
 let bool3 = (x > y); // false
 let bool4 = (x < y); // true
 let bool5 = (x >= y); // flase
-let bool6 = (x <>= y); // true
+let bool6 = (x <= y); // true
 let bool7 = (x === y); // flase
 let bool8 = (x !== y); // true
 ```
