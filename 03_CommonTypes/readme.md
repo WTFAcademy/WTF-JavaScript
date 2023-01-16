@@ -32,12 +32,12 @@ JavaScript 中有三个特殊数值。
   const nan = 0/0 // NaN
   ```
 
-2. Infinity：无穷大，表示超出上限的结果，比如 `1 / 0`。
+2. `Infinity`：无穷大，表示超出上限的结果，比如 `1 / 0`。
   ```js
   const inf = 1/0 // Infinity
   ```
 
-3. -Infinity：负无穷大，表示超出下限的结果，比如 `-1 / 0`。
+3. `-Infinity`：负无穷大，表示超出下限的结果，比如 `-1 / 0`。
   ```js
   const negInf = -1/0 // -Infinity
   ```
