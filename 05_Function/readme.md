@@ -1,4 +1,8 @@
-# WTF JavaScript 极简教程: 5. 函数 function
+---
+title: 5. 函数
+---
+
+# WTF JavaScript 极简教程: 5. 函数
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
