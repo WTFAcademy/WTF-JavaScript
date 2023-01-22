@@ -24,6 +24,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第4讲：运算符**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/04_Operators/Operators.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/04_Operators/readme.md)】【[PlayCode](https://playcode.io/1061414)】
 
+**第5讲：函数**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/05_Function/Function.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/05_Function/readme.md)】
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">

@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程: 5. function
+# WTF JavaScript 极简教程: 5. 函数 function
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -10,118 +10,95 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-这一讲，我们将介绍JS中的`function`，包括三种定义函数的语法、函数引用和函数的参数。
+这一讲，我们将介绍 JavaScript 中的函数 `function`，包括定义函数的语法、函数引用和函数的参数。
 
-## 三种定义函数的语法
+## 函数声明
 
-下面我们以加法为例使用三种方法来定义具有相同功能的函数。
+函数是 JavaScript 的基本组件之一，它将一串指令包装起来，方便重复利用，让代码更加系统化。你可以把搜索引擎理解为一个函数，每次在你输入搜索内容并点击搜索键之后，它会运行一串非常复杂的逻辑，然后返回给你搜索结果。
 
-### 函数声明
+函数最大的特征是拥有参数和返回值：
 
-```javascript
-function sum(num1,num2){
-    return num1 + num2
+```js
+function foo(input){
+    return input;
+}
+// foo(5) 将返回 5
+```
+
+上面的代码中，我们用 ` function` 关键字声明了一个名为 `foo` 的函数。它有一个参数 `input`，可以在调用函数的时候输入。花括号 `{}` 中包裹着函数体，承载着函数的逻辑。这个函数逻辑非常简单，我们用 `return` 关键字定义了一个返回值，它会结束函数的运行并将 `input` 原封不动的返回给调用者。 
+
+`foo()` 看起来有点没用，下面我们丰富一下函数体，让它完成更多功能。
+```js
+function bar(input){
+    let output = input * 2;
+    return output;
+}
+// bar(5) 将返回 10
+```
+
+上面的 `bar()` 函数中，我们计算了 `input * x`，然后将它赋值给 `output` 变量，最后返回。
+
+函数可以承载多个参数，下面的 `sum()` 函数中，我们实现了加法，将参数 `x` 和 `y` 相加，并返回。这里返回值我们没有使用变量，而是一个表达式；运行时，程序会先执行表达式，然后将结果返回。
+
+```js
+function sum(x, y){
+    return x + y;
+}
+// sum(5, 6) 将返回 11
+```
+
+## 函数调用
+
+你可以使用 `函数名(参数)` 的模式来调用函数，例如:
+```js
+sum(5, 6); // 返回 11
+```
+
+你也可以在函数中调用另一个函数:
+
+```js
+function sumCall(x, y){
+    let output = sum(x, y)
+    return output;
 }
 ```
+> `Tips`: 如果仅使用 `函数名` 的话，会返回该函数对象，而非返回值，因此调用函数时一定要加括号和参数。
 
-`function`表示函数类型，`sum`代表函数名。
+## 函数表达式和箭头函数（选读）
 
-小括号中的`num1`、`num2`表示函数的两个参数，大括号中的语句表示函数体，也就是调用函数后要执行的代码。
+下面我们介绍另外两种定义函数的方法。
 
-`return`关键字指定函数的返回值，任何值都可以作为返回值。如果不写`return`或者只写`return`后面不跟任何值，就相当于`return undefined`。
+1. 函数表达式: 它与上面的方式声明几乎一样，唯一的区别就是函数名 `add1` 被提到前面作为变量，并且多了赋值操作。使用起来也是一样的。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function#%E8%AF%AD%E6%B3%95)
 
-如果函数体中存在`return`，那么函数执行到`return`就结束了，后面写再多语句也是无效的。
+    ```js
+    let sum1 = function(x, y){
+        return x + y;
+    }
+    ```
 
-### 函数表达式
+2. 箭头函数: ES6 版本新增了使用箭头语法 `=>` 来定义函数，这种语法比另外两种方法更为简洁。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
-```javascript
-let sum = function(num1,num2){
-    return num1 + num2
+    ```js
+    let sum2 = (x, y) => {
+        return x + y;
+    }
+    ```
+## 习题
+
+修改下面的 `prod()` 函数，让它返回两个参数 `x` 和 `y` 的积。
+
+```jsx live
+function TestJS05(props) {
+  // 要修改的函数 prod，计算x和y的积
+  function prod(x, y){
+    return ;
+  }
+
+  // 应返回30
+  return prod(5, 6);
 }
 ```
-
-函数表达式与函数声明几乎一样，唯一的区别就是与函数声明相比，`sum`被提到前面作为变量，同时函数被赋值给它，因此该函数可以通过变量`sum`来引用。
-
-### 箭头函数（arrow function）
-
-ES6新增了使用`=>`语法来定义函数，这种语法比函数声明和函数表达式都更为简洁。
-
-```javascript
-let sum = (num1,num2) => {
-    return num1+num2
-}
-```
-
-在上面的语句中，`=`右边的就是箭头函数，该函数同样也是被赋值给变量`sum`。
-
-箭头函数如果只有一个参数，可以不使用小括号。只有在没有参数，或者有多个参数的情况下，才必须使用小括号：
-
-```javascript
-let add = x => {return x + 1} //只有一个参数
-let getRandom = () =>{return Math.random()} //没有参数需要括号
-let sum = (num1,num2) => {return num1 + num2} //多个参数需要括号
-let sum = num1,num2 => {return num1 + num2} // 错误的写法
-```
-
-箭头函数的大括号也可以省略，如果不使用大括号，那么箭头后面就只能有一行代码，并且如果这行代码有值的话会被返回。
-
-```javascript
-let double = x => x * 2 //返回x的2倍
-let print = x => console.log(x) //返回undefined
-```
-
-## 函数引用
-
-在上述三种定义函数的例子中，`sum`均为函数名。
-
-使用不带括号的函数名会返回该函数，带上括号后才会执行该函数。
-
-![](./img/5-1.png)
-
-## 函数的参数
-
-函数的参数分为形参和实参。
-
-### 形参
-
-在下面这个函数中，`num1`是在定义函数时创建的形式参数（形参），并且`num1`会自动在函数内部声明但不会被赋值。
-
-```javascript
-function sum1(num1) {
-    console.log('num1 =',num1) //num1 = undefined
-}
-```
-
-![](./img/5-2.png)
-
-### 实参
-
-在调用函数时，可以通过函数的`()`传递任意数量的实参，实参会赋值给对应位置的形参并遵循以下规则：
-
-1. 如果实参和形参数量一样，则实参和形参的值一一对应。
-2. 如果实参比形参多，那么多余的实参不会被使用。
-3. 如果形参比实参多，那么多余的形参为`undefined`，也就是未被赋值。
-
-![](./img/5-3.png)
-
-### 函数也可以作为参数
-
-```javascript
-function ft1(x) {
-    console.log('x =',x)
-}
-function ft2(){
-    console.log('我是fn2函数')
-}
-ft1(ft2)
-```
-
-![](./img/5-4.png)
 
 ## 总结
 
-这一讲，我们具体介绍了JS中的`function`，包括三种定义函数的语法、函数引用和函数的参数。箭头函数和函数表达式其实存在一些区别，学员可以自行探索一下。
-
-## 参考资料
-
-JavaScript高级程序设计（第4版）10 函数
+这一讲，我们介绍了 JavaScript 中的函数，包括定义函数的语法和如何调用函数。函数是你编程中最好的伴侣，我们会在之后的教程中反复利用它。
