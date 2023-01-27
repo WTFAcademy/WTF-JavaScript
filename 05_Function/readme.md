@@ -29,7 +29,7 @@ function foo(input){
 // foo(5) 将返回 5
 ```
 
-上面的代码中，我们用 ` function` 关键字声明了一个名为 `foo` 的函数。它有一个参数 `input`，可以在调用函数的时候输入。花括号 `{}` 中包裹着函数体，承载着函数的逻辑。这个函数逻辑非常简单，我们用 `return` 关键字定义了一个返回值，它会结束函数的运行并将 `input` 原封不动的返回给调用者。 
+上面的代码中，我们用 `function` 关键字声明了一个名为 `foo` 的函数。它有一个参数 `input`，可以在调用函数的时候输入。花括号 `{}` 中包裹着函数体，承载着函数的逻辑。这个函数逻辑非常简单，我们用 `return` 关键字定义了一个返回值，它会结束函数的运行并将 `input` 原封不动的返回给调用者。 
 
 `foo()` 看起来有点没用，下面我们丰富一下函数体，让它完成更多功能。
 ```js
@@ -72,7 +72,7 @@ function sumCall(x, y){
 
 下面我们介绍另外两种定义函数的方法。
 
-1. 函数表达式: 它与上面的方式声明几乎一样，唯一的区别就是函数名 `add1` 被提到前面作为变量，并且多了赋值操作。使用起来也是一样的。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function#%E8%AF%AD%E6%B3%95)
+1. 函数表达式: 它与上面的方式声明几乎一样，唯一的区别就是函数名 `sum1` 被提到前面作为变量，并且多了赋值操作。使用起来也是一样的。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function#%E8%AF%AD%E6%B3%95)
 
     ```js
     let sum1 = function(x, y){
