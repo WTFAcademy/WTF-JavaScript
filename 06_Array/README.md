@@ -137,10 +137,13 @@ arr是一个不重复数字组成的数组，在下面新增代码，
 
 ```js
 let arr = [1,5,3,9,6,8,10,7,12] //全部是不重复的数字
-// 新增代码
+for(let num1 of arr){
+  for(let num2 of arr){
+    // 新增代码
+    console.log(num1,num2) // num1+num2 == 18
+  }
+}
 
-
-console.log(num1,num2) // num1+num2 == 18
 
 ```
 
