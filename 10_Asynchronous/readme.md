@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程: 8. 异步
+# WTF JavaScript 极简教程: 10. 异步
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -441,6 +441,12 @@ hello()
 ## 习题
 
 使用 async/await 重写前面 `Promise` 链式调用获取 WTF Solidity 教程第一课标题的例子。
+
+```jsx live
+function TestJS10(props) {
+  
+}
+```
 
 ## 总结
 
