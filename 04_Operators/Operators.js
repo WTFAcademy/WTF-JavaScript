@@ -16,7 +16,7 @@ let bool2 = (x != y); // true
 let bool3 = (x > y); // false
 let bool4 = (x < y); // true
 let bool5 = (x >= y); // flase
-let bool6 = (x <>= y); // true
+let bool6 = (x <= y); // true
 let bool7 = (x === y); // flase
 let bool8 = (x !== y); // true
 
