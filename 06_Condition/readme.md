@@ -83,7 +83,7 @@ if (z === 0) {
 
 ```js
 // 返回 x 和 z 之中更大的数
-let bigger = x < z? x : z;
+let bigger = x < z ? x : z;
 console.log(bigger);
 ```
 
