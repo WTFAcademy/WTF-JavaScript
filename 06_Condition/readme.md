@@ -10,7 +10,9 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-这一讲，我们介绍 JavaScript 中的条件语句，它可以让我们做到根据不同条件执行不同的操作。
+在投资中，我们经常会根据价格不同而采取不同的策略。这一讲，我们介绍 JavaScript 中的条件语句，它可以让我们做到根据不同条件执行不同的操作。
+
+![](./img/6-1.png)
 
 ## if 语句
 
@@ -25,13 +27,13 @@ if (条件) {
 当 `if` 语句的条件为  `true` 时，则会执行对应的代码块。例如：
 
 ```js
-let x = 1
+let x = 1;
 
 if (x > 0) {
-  x = x + 1
+  x = x + 1;
 }
 
-console.log(x) // 2
+console.log(x); // 2
 ```
 
 `if` 语句会计算圆括号内的表达式，并将计算结果转换为布尔类型，下列值将会被计算为 `false` ：
@@ -45,145 +47,61 @@ console.log(x) // 2
 
 当传递给 `if` 语句所有其他的值，包括所有对象会被计算为 `true`
 
-## else 语句
+## if-else 语句
 
 `if` 代码块后还可以跟随一个 `else` 代码块，如果判断条件不成立，则会执行它内部的代码。
 
 ```js
-let x = 1
+let y = 1;
 
-if (x > 1) {
-  x = x + 1
+if (y != 1) {
+  y = y + 1;
 } else {
-  x = x - 1
+  y = y - 1;
 }
 
-console.log(x) // 0
+console.log(y); // 0
 ```
 
-## else if 语句
+## else-if 语句
 
-有时我们需要进行多次判断，可以通过使用  `else if` 语句实现：
+有时我们需要进行多次判断，可以通过使用  `else-if` 语句实现：
 
 ```js
-let x = 1
+let z = 2;
 
-if (x === 0) {
-  console.log('x 的值为 0')
-} else if (x === 1) {
-  console.log('x 的值为 1')
-} else if (x === 2) {
-  console.log('x 的值为 2')
+if (z === 0) {
+  console.log('x 的值为 0');
+} else if (z === 1) {
+  console.log('x 的值为 1');
+} else if (z === 2) {
+  console.log('x 的值为 2');
 } else {
-  console.log('x 为其它值')
+  console.log('x 为其它值');
 }
 ```
 
-## switch 语句
+## 三元运算符
 
-`switch` 语句有至少一个  `case` 代码块和一个可选的  `default` 代码块，基本结构如下：
-
-```js
-switch (表达式) {
-  case value1:
-    语句1
-    break
-
-  case value2:
-    语句2
-    break
-
-  default:
-    语句3
-    break
-}
-```
-
-`switch` 语句比较表达式的值是否与 `case` 的值**严格相等，**如果相等则执行当前 `case` 下的代码块，直到遇到最靠近的  `break` 语句，否则与下一个 `case` 进行比较，如果没有符合的 case，则执行  `default` 代码块。
+三元运算符，也称条件运算符，是 JavaScript 唯一使用三个操作数的运算符。使用规则： `条件 ? 表达式1 : 表达式2`。当条件为真时，执行`表达式1`，否则执行`表达式2`。该运算符经常当作 `if-else` 语句的简捷形式来使用。例如：
 
 ```js
-let x = 1
-
-switch (x) {
-  case 1: // if (x === 1)
-    console.log('x 的值为 1')
-    break
-
-  case 2: // if (x === 2)
-    console.log('x 的值为 2')
-    break
-
-  default:
-    console.log('x 为其它值')
-    break
-}
-
-// x 的值为 1
-```
-
-上面代码根据变量 `x` 的值，选择执行相应的 `case` 。如果所有 `case` 都不符合，则执行最后的`default` 部分。
-
-需要注意的是，如果 `case` 代码块内部没有 `break` 语句时，程序将不经过任何检查就会继续执行下一个  `case`，而不是跳出`switch` 结构。像下面这样：
-
-```js
-let x = 1
-
-switch (x) {
-  case 1:
-    console.log('x 的值为 1')
-
-  case 2:
-    console.log('x 的值为 2')
-
-  default:
-    console.log('x 为其它值')
-}
-
-// x 的值为 1
-// x 的值为 2
-// x 为其它值
-```
-
-共享同一段代码的几个  `case` 分支可以被分为一组，比如我们希望 `case 1` 和 `case 2` 执行相同的逻辑，我们可以这样做：
-
-```js
-let x = 1
-
-switch (x) {
-  case 1:
-  case 2:
-    console.log('x 的值为 1 或 2')
-
-  default:
-    console.log('x 为其它值')
-}
-
-// x 的值为 1 或 2
+// 返回 x 和 z 之中更大的数
+let bigger = x < z? x : z;
+console.log(bigger);
 ```
 
 ## 习题
 
-将下面 `switch` 结构的代码写成 `if..else` 结构：
+补全下面的 `isOdd` 函数，完成逻辑: 当输入参数 `num` 为奇数时，返回 `true`，偶数时返回 `false`。
 
-```jsx live
-function TestJS06(props) {
-  const name = 'JavaScript'
+> 提示：可以使用取余运算符 `%` 来计算 `num` 与 2 的余数。如果是 0，则为偶数；如果是 1，则为奇数。
 
-  switch (name) {
-    case 'Solidity':
-      return 'Hello, WTF Solidity!'
-
-    case 'HTML':
-    case 'CSS':
-    case 'JavaScript':
-      return 'Hello, WTF Web!'
-
-    default:
-      return 'Hello, WTF Academy!'
-  }
+```js
+function isOdd(num){
 }
 ```
 
 ## 总结
 
-这一讲我们介绍了 JavaScript 的条件语句。JavaScript 提供了 `if` 和 `switch` 两种条件语句结构进行条件判断，只有满足预设的条件，才会执行相应的语句。
+这一讲我们介绍了 JavaScript 的条件语句，包括 `if`，`if-else`，`else-if`，和三元运算符。它们可以丰富程序的逻辑性。

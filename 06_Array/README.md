@@ -143,8 +143,6 @@ for(let num1 of arr){
     console.log(num1,num2) // num1+num2 == 18
   }
 }
-
-
 ```
 
 ## 总结
