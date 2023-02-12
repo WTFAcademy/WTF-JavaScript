@@ -26,6 +26,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第5讲：函数**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/05_Function/Function.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/05_Function/readme.md)】【[PlayCode](https://playcode.io/1109558)】
 
+**第5讲：条件语句**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/06_Condition/Condition.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/06_Condition/readme.md)】
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">

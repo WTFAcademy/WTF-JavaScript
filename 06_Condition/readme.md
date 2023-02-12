@@ -28,11 +28,9 @@ if (条件) {
 
 ```js
 let x = 1;
-
 if (x > 0) {
   x = x + 1;
 }
-
 console.log(x); // 2
 ```
 
@@ -53,13 +51,11 @@ console.log(x); // 2
 
 ```js
 let y = 1;
-
 if (y != 1) {
   y = y + 1;
 } else {
   y = y - 1;
 }
-
 console.log(y); // 0
 ```
 
