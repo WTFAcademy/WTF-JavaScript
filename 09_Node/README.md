@@ -17,18 +17,29 @@ Node全称是Node.js。在[Node 官网](https://nodejs.org/zh-cn/)中文首页�
 ## 安装Node.js
 #### Mac版本
 1.打开[Node.js官网](https://nodejs.org/zh-cn/)，如果官网打不开，可以访问国内[Node.js中文网](http://nodejs.cn/download/).下载Mac对应的pkg包即可。
+
 ![](./img/Node_DownLoad.png)
 #### Win版本
 1.打开[Node.js官网](https://nodejs.org/zh-cn/)，如果官网打不开，可以访问国内[Node.js中文网](http://nodejs.cn/download/).下载Win对应的exe包即可。
 
+![](./img/win-download.png)
+
 #### 如何确认自己是否安装成功Node.js?
-1. 打开终端，如果是Win系统，那就打开cmd.如果是Mac那就打开Terminal.
-输入如下命令
+1. 如果是Mac那就打开Terminal,输入如下命令
+
 ```js
 node -v
 ```
 看到如下结果，就是安装成功了。
 ![](./img/1675338169220.jpg)
+
+如果是Win系统，那就打开CMC.输入如下命令
+```js
+node --version
+```
+![](./img/runing.png)
+看到如下结果，就是安装成功了。
+![](./img/win-node.png)
 
 2. 此时我们在桌面创建一个Test.js的文本文件，然后用文本编辑器打开。
 将如下代码复制进去
