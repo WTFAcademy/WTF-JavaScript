@@ -30,6 +30,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第7讲：循环**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/07_Loop/Loop.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/07_Loop/readme.md)】
 
+**第8讲：数组**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/08_Array/Array.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/08_Array/readme.md)】
+
 
 ## WTF JavaScript贡献者
 <div align="center">

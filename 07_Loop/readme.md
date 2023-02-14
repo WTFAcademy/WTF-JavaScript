@@ -135,6 +135,9 @@ for (let i = 0; i < 10; i++) {
 function sum(num) {
   
 }
+
+console.log(sum(5)) // 应该返回 15
+console.log(sum(9)) // 应该返回 45
 ```
 
 ## 总结
