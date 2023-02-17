@@ -21,13 +21,13 @@ JavaScript 中的对象类型是一系列属性和方法的集合。比如一辆
 
 ```js
 // 空对象
-let empty = {}
+let empty = {};
 // 包含 3 个属性的对象
 let intro = {
   name: '0xAA',
   age: 1,
   isDeveloper: true,
-}
+};
 ```
 
 对象也可以包含方法（函数）:
@@ -39,7 +39,7 @@ let wtf = {
   hello: function(){
     return "Hello JavaScript!";
   }
-}
+};
 ```
 
 ## 读取
@@ -48,15 +48,15 @@ let wtf = {
 
 ```js
 // 读取属性
-console.log(intro['name']) // 注意 `name` 是个字符串，有引号
-console.log(intro.name) // 注意这种写法没有引号
+console.log(intro['name']); // 注意 `name` 是个字符串，有引号
+console.log(intro.name); // 注意这种写法没有引号
 ```
 
 对象内部的方法可以用 `对象.函数名()` 的方式调用：
 
 ```js
 // 使用函数
-console.log(wtf.hello()) // "Hello JavaScript!"
+console.log(wtf.hello()); // "Hello JavaScript!"
 ```
 
 ## 写入
@@ -64,14 +64,14 @@ console.log(wtf.hello()) // "Hello JavaScript!"
 我们可以利用索引来编辑对象的值：
 ```js
 intro.age = 99;
-console.log(intro.age) // 99
+console.log(intro.age); // 99
 ```
 
 我们可以使用不存在的索引在对象里引入新的键值对。
 ```js
 // 在 intro 对象中添加 gender 键值对
 intro.gender = "male";
-console.log(intro.gender) // "male"
+console.log(intro.gender); // "male"
 ```
 
 ## 遍历
@@ -103,7 +103,7 @@ for(let i = 0; i < keys.length; i++){
 
 ```js
 delete wtf.name;
-// 或 delete wtf["name];
+// 或 delete wtf["name"];
 console.log(Object.keys(wtf)); // hello
 ```
 
@@ -123,8 +123,8 @@ let obj1 = {
 let obj2 = {
   name: "Trump";
 }
-console.log(isDev(obj1)) // 应该输出 true
-console.log(isDev(obj2)) // 应该输出 false
+console.log(isDev(obj1)); // 应该输出 true
+console.log(isDev(obj2)); // 应该输出 false
 ```
 
 ## 总结
