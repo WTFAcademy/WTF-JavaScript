@@ -32,6 +32,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第8讲：数组**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/08_Array/Array.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/08_Array/readme.md)】
 
+**第9讲：对象**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/09_Object/Object.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/09_Object/readme.md)】
+
 
 ## WTF JavaScript贡献者
 <div align="center">
