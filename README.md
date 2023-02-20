@@ -34,6 +34,7 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第9讲：对象**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/09_Object/Object.js)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/09_Object/readme.md)】
 
+**第10讲：异步**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/10_Async)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/10_Async/readme.md)】
 
 ## WTF JavaScript贡献者
 <div align="center">
