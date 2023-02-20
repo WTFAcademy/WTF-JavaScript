@@ -16,104 +16,147 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ![](./img/10-1.png)
 
-JavaScript 是单线程的编程语言，浏览器按照我们代码的顺序一行一行地执行程序。如果执行到一个耗时很长的任务，后面的任务就会被阻塞，拖延整个程序的执行。异步编程技术可以使你的程序在执行一个可能长期运行的任务的同时，继续对其他事件做出反应，不必等待任务完成。
+JavaScript 是单线程的编程语言，浏览器按照我们代码的顺序一行一行地执行程序。如果执行到一个耗时很长的任务，后面的任务就会被阻塞，拖延整个程序的执行。异步编程技术允许我们执行一个长时间任务时，程序不需要进行等待，而是继续执行后面的代码，直到任务完成之后再回来通知。这大大提高了程序的效率，尤其是对于输入输出密集的程序，比如文件读取，数据库查询，网络访问。
 
 ### 回调函数
 
-在 JavaScript 中，函数也是对象，可以作为参数传入另一个函数。这种用法也被称为回调函数，它曾经是 JavaScript 中实现异步函数的主要方式。下面是一个经典的例子，我们定义了一个 `callback()` 函数，并作为参数传给了 `setTimeout()` 定时器函数：
+在 JavaScript 中，函数也是对象，可以作为参数传入另一个函数，这也被称为回调函数。它曾经是 JavaScript 中实现异步函数的主要方式。下面是一个经典的例子，我们定义了一个 `callback()` 函数，并作为参数传给了 `setTimeout()` 定时器函数：
 
 ```js
 function callback() {
-  console.log('Hello, WTF JavaScript!')
+  console.log('Hello, JavaScript!');
 }
 
-setTimeout(callback, 1000)
-// Hello, WTF JavaScript! (1 秒后输出)
+setTimeout(callback, 1000);
+console.log("hello");
+// hello
+// Hello, JavaScript! (1 秒后输出)
 ```
 
-上面的程序会在等待 1 秒后执行 `callback` 函数，输出`“Hello, WTF JavaScript!”`。对 `setTimeout` 更详细的介绍请阅读[MDN教程](https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout)。
+上面的程序会先输出 `hello`，然后再等待 1 秒后执行 `callback` 函数，输出`“Hello, JavaScript!”`，即使 `setTimeout` 函数在 `console.log("hello")` 之前。对 `setTimeout` 更详细的介绍请阅读[MDN教程](https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout)。
 
-但是如果异步任务数量很多时，这种方案容易出错，现已被 `Promise` 代替。下面是使用回调函数维护 3 个异步任务的例子：
+但如果异步任务数量很多时，这种方案容易出错，下面是使用回调函数维护 3 个异步任务的例子：
 
 ```js
 setTimeout(() => {
-  console.log('Hello, WTF JavaScript!')
+  console.log('Hello, WTF JavaScript!');
   setTimeout(() => {
-    console.log('Hello, WTF HTML!')
+    console.log('Hello, WTF HTML!');
     setTimeout(() => {
-      console.log('Hello, WTF CSS!')
+      console.log('Hello, WTF CSS!');
     }, 1000)
   }, 1000)
 }, 1000)
 ```
 
+这种代码极难维护，也被称为 “回调地狱” （callback hell），现已被 `Promise` 方案取代。
+
 ### Promise
 
 ![](./img/10-2.png)
 
-`Promise` 是异步编程的现代解决方案，比回调函数方案更强大。它由社区最早提出和实现，ES6 将其写进语言标准并统一用法，原生提供了 `Promise` 对象。
+`Promise` （承诺）是异步编程的现代解决方案，比回调函数方案更强大。它由社区最早提出和实现，ES6 将其写进语言标准并统一用法，原生提供了 `Promise` 对象。
 
-`Promise` 对象有三种状态：`pending`（进行中）、`fulfilled`（已成功）和 `rejected`（已失败）。只有异步操作的结果可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。`Promise` 对象的状态改变，只有两种可能：从 `pending` 变为 `fulfilled` 和从 `pending` 变为 `rejected`。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。
+`Promise` 对象有三种状态：`pending`（进行中）、`fulfilled`（已成功）和 `rejected`（已失败）。初始状态为 `pending`，最终状态由异步操作的结果决定。`Promise` 对象的状态改变，只有两种可能：从 `pending` 变为 `fulfilled` 和从 `pending` 变为 `rejected`。下面我们用 `Promise` 重写第一个示例:
 
-由于 `Promise` 比较复杂，这一讲我们着重介绍在它之上建立的 `async/await` 语法，使用起来更简单。
+```js
+// 定义 promise 实例
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Hello, JavaScript Promise!');
+  }, 1000)
+})
+// 运行 Promise 实例
+promise.then((value) => {
+  console.log(value);
+})
+console.log("hello Promise");
+// hello Promise
+// Hello, JavaScript Promise! (1 秒后输出)
+```
+
+由于 `Promise` 比较复杂，我们在后面的教程中再详细讲解。这一讲我们着重介绍在它之上建立的 `async/await` 语法。
 
 ## async/await
 
-async/await 是 `Promise` 的语法糖（功能不变，但是更方便程序员使用的语法），让异步编程更易于理解和使用。
+async/await 是 `Promise` 的语法糖，让异步编程更易于理解和使用。
 
 ### async 函数
 
-`async` 函数是使用 `async` 关键字声明的函数，一个函数前面如果加上 `async` 关键字 ，那么该函数就会返回一个 `Promise`
+我们可以在一个函数前面加上 `async` 关键字 ，将它变为异步函数，它的返回值会被自动包装为一个 `Promise`。与普通函数不同，异步函数不会阻塞程序的运行，让 JavaScript 引擎同时处理其他任务：执行其他脚本，处理事件等。
 
 ```js
 async function hello() {
-  return 'Hello, WTF JavaScript!'
+  console.log("Hello, JavaScript async!");
 }
 
-console.log(hello()) // Promise {<fulfilled>: 'Hello, WTF JavaScript!'}
+console.log(hello());
+// Promise {<fulfilled>: 'Hello, JavaScript async!'}
 ```
 
-如果一个 `async` 函数的返回值看起来不是 `Promise`，那么它将会被隐式地包装在一个 `Promise` 中，所以上面的例子等同于：
+### await 关键字
+
+`await` 关键字**只能在** `async` 函数内工作，作用是让 JavaScript 引擎等待直到 `Promise` 完成并返回结果。它可以用于修饰 `async` 函数或 `Promise`。
 
 ```js
-function hello() {
-  return Promise.resolve('Hello, WTF JavaScript!')
+async function helloAwait() {
+  const value = await hello();
+  console.log("hello await");
 }
-
-console.log(hello()) // Promise {<fulfilled>: 'Hello, WTF JavaScript!'}
+helloAwait()
+// Hello, JavaScript async! (1 秒后输出)
+// hello await
 ```
 
-### await
+注意，上面的代码会等待 1 秒后输出 `Hello async`，然后才是 `hello await`。
 
-正常情况下，`await` 命令后面是一个 `Promise` 对象，返回该对象的结果。如果不是 `Promise` 对象，就直接返回对应的值。
+### async/await 例子
+
+![](./img/10-3.png)
+下面，我们演示如何使用 `async/await` 语法来读取非常流行的无聊猿（BAYC）NFT的元数据。
+
+1. NFT 元数据是构成 NFT 内容的一组数据，通常以 [JSON](https://zh.wikipedia.org/wiki/JSON) 格式保存在网络上。比如下面 `url` 中的链接保存着 `id = 1` 的BAYC元数据，包括小图片网址和属性（嘴、头发、衣服等特征）：
+
+  ```js
+  let url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
+  // 数据形式
+  // {"image":"ipfs://QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi","attributes":[{"trait_type":"Mouth","value":"Grin"},{"trait_type":"Clothes","value":"Vietnam Jacket"},{"trait_type":"Background","value":"Orange"},{"trait_type":"Eyes","value":"Blue Beams"},{"trait_type":"Fur","value":"Robot"}]}
+  ```
+
+2. 你可以使用 `fetch()` 函数来进行 HTTP 访问，获取网络数据。它会返回一个包装成 `Promise` 的 HTTP 响应，因此你需要使用 `await` 关键字来获取结果 `response`。然后，你需要用 `json()` 方法获取 JSON 的内容，也就是元数据。
+
+  ```js
+  let response = await fetch(url);
+  let BaycMetadata = await response.json();
+  ```
+
+3. 将上面的代码组合成一个 `async` 函数 `getBaycMetadata`:
 
 ```js
-async function hello() {
-  const value = await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Hello, WTF JavaScript!')
-    }, 1000)
-  })
-  console.log(value)
+// async/await 示例
+async function getBaycMetadata(){
+  let url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
+  let response = await fetch(url);
+  let BaycMetadata = await response.json();
+  console.log(BaycMetadata);
 }
-
-hello()
-
-// Hello, WTF JavaScript! (1 秒后输出)
+getBaycMetadata()
+// image: "ipfs://QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi"
+// attributes...
 ```
-
-
 
 ## 习题
 
-使用 async/await 重写前面 `Promise` 链式调用获取 WTF Solidity 教程第一课标题的例子。
+基于这一讲的例子，写一个根据用户输入的 tokenId（1~10000）来获取相应的无聊猿的元数据。
+
+> 提示: 示例中url的最后一位的代表 tokenId，可以使用 `{$tokenId}` 进行替换。
 
 ```jsx live
-function TestJS10(props) {
+function getBaycMetadataById(tokenId) {
   
 }
 ```
 
 ## 总结
 
-这一讲我们介绍了 JavaScript 的异步编程方式，从回调函数到 Promise 再到 async/await。Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易。async/await 使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写异步代码那样编写同步代码。
+这一讲我们介绍了 JavaScript 的异步编程，包括回调函数，Promise，以及重点讲的 async/await，并且利用它获取了无聊猿NFT的元数据。Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易。async/await 使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写异步代码那样编写同步代码。
