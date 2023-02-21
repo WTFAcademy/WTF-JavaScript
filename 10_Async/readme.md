@@ -120,7 +120,7 @@ helloAwait()
 1. NFT 元数据是构成 NFT 内容的一组数据，通常以 [JSON](https://zh.wikipedia.org/wiki/JSON) 格式保存在网络上。比如下面 `url` 中的 [ipfs](https://gateway.ipfscdn.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1) 链接保存着 `id = 1` 的BAYC元数据，包括小图片网址和属性（嘴、头发、衣服等特征）。
 
   ```js
-  let url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
+  const url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
   // 数据形式
   // {"image":"ipfs://QmPbxeGcXhYQQNgsC6a36dDyYUcHgMLnGKnF8pVFmGsvqi","attributes":[{"trait_type":"Mouth","value":"Grin"},{"trait_type":"Clothes","value":"Vietnam Jacket"},{"trait_type":"Background","value":"Orange"},{"trait_type":"Eyes","value":"Blue Beams"},{"trait_type":"Fur","value":"Robot"}]}
   ```
@@ -128,8 +128,8 @@ helloAwait()
 2. 你可以使用 `fetch()` 函数来进行 HTTP 访问，获取网络数据。它会返回一个包装成 `Promise` 的 HTTP 响应，因此你需要使用 `await` 关键字来获取结果 `response`。然后，你需要用 `json()` 方法获取 JSON 的内容，也就是元数据。
 
   ```js
-  let response = await fetch(url);
-  let BaycMetadata = await response.json();
+  const response = await fetch(url);
+  const BaycMetadata = await response.json();
   ```
 
 3. 将上面的代码组合成一个 `async` 函数 `getBaycMetadata`:
@@ -137,9 +137,9 @@ helloAwait()
 ```js
 // async/await 示例
 async function getBaycMetadata(){
-  let url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
-  let response = await fetch(url);
-  let BaycMetadata = await response.json();
+  const url = `https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1`;
+  const response = await fetch(url);
+  const BaycMetadata = await response.json();
   console.log(BaycMetadata);
 }
 getBaycMetadata()
