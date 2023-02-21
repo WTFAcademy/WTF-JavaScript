@@ -1,14 +1,14 @@
 // 对象的定义
 // 空对象
-let empty = {}
+const empty = {}
 // 包含 3 个属性的对象
-let intro = {
+const intro = {
   name: '0xAA',
   age: 1,
   isDeveloper: true,
 }
 // 包含方法的对象
-let wtf = {
+const wtf = {
   name: `WTF JavaScript`,
   hello: function(){
     return "Hello JavaScript!";
@@ -34,7 +34,7 @@ for(let key in intro){
   console.log('data '+ key + ': ' + intro[key])
 }
 // 另一种方法
-let keys = Object.keys(intro);
+const keys = Object.keys(intro);
 for(let i = 0; i < keys.length; i++){
   console.log('data '+ keys[i] + ': ' + intro[keys[i]])
 }

@@ -21,9 +21,9 @@ JavaScript 中的对象类型是一系列属性和方法的集合。比如一辆
 
 ```js
 // 空对象
-let empty = {};
+const empty = {};
 // 包含 3 个属性的对象
-let intro = {
+const intro = {
   name: '0xAA',
   age: 1,
   isDeveloper: true,
@@ -34,7 +34,7 @@ let intro = {
 
 ```js
 // 包含方法的对象
-let wtf = {
+const wtf = {
   name: `WTF JavaScript`,
   hello: function(){
     return "Hello JavaScript!";
@@ -91,7 +91,7 @@ for(let key in intro){
 我们也可以使用 `Object.keys(对象)` 来获取对象中所有键，然后通过 `for` 循环遍历所有键值对。这个方法比较复杂，不推荐。
 
 ```js
-let keys = Object.keys(intro);
+const keys = Object.keys(intro);
 for(let i = 0; i < keys.length; i++){
   console.log('data '+ keys[i] + ': ' + intro[keys[i]])
 }
@@ -116,11 +116,11 @@ function isDev(obj){
 
 }
 
-let obj1 = {
+const obj1 = {
   name: "0xAA";
   isDeveloper: true;
 }
-let obj2 = {
+const obj2 = {
   name: "Trump";
 }
 console.log(isDev(obj1)); // 应该输出 true

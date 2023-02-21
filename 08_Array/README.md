@@ -17,19 +17,19 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ```js
 // 没有元素的空数组
-let empty = [];
+const empty = [];
 // 存储三个字符串的数组
-let courses = ["Solidity", "Etherjs", "JavaScript"];
+const courses = ["Solidity", "Etherjs", "JavaScript"];
 // 存储不同数据类型的数组
-let mix = [1,'WTF',true];
+const mix = [1,'WTF',true];
 ```
 
 数组中的元素可以使基础类型，也可以是另外一个数组。你可以通过数组存储比较复杂的嵌套数据。下面，`complex` 数组包含了 `courses` 和 `mix` 两个数组：
 
 ```js
 // complex是一个数组，包含两个元素，每个元素都是另外一个数组
-let complex = [courses, mix];
-let nested = [[1, 2], [1, 1, 1]];
+const complex = [courses, mix];
+const nested = [[1, 2], [1, 1, 1]];
 ```
 
 ## 读写数组
@@ -41,7 +41,7 @@ let nested = [[1, 2], [1, 1, 1]];
 我们可以在变量上使用索引（中括号 `[]`）来读取数组元素。注意数组的索引是从 0 开始计算的：
 
 ```js
-let arr = [1,2,3,["Solidity",true]]
+const arr = [1,2,3,["Solidity",true]]
 // 读取第 0 个元素
 console.log(arr[0])  // 1
 // 读取嵌套数组第 0 个元素
@@ -70,7 +70,7 @@ console.log(arr.length) // 4
 一个数组存储着多个数据，我们可以用循环来遍历数组内部的所有元素。下面的例子中，我们使用 for 循环来计算 `numArr` 数组的平均值。
 
 ```js
-let numArr = [5, 8, 9, 11, 55];
+const numArr = [5, 8, 9, 11, 55];
 let average = 0;
 for(let i = 0; i < numArr.length; i++){
   average += numArr[i] / numArr.length
@@ -89,7 +89,7 @@ console.log(`平均值为: ${average}`) // 17.6
 数组中我们可以使用 `push` 方法在数组最后 `推入` （新增）一个元素。这个方法会使数组长度加一。
 
 ```js
-let nums = [1,2,3]
+const nums = [1,2,3]
 nums.push(4)
 console.log(nums) // [1, 2, 3, 4]
 ```
@@ -102,7 +102,7 @@ console.log(nums) // [1, 2, 3, 4]
 
 ```js
 // pop方法会返回被弹出的元素
-let last = nums.pop()
+const last = nums.pop()
 console.log(last) // 4  弹出
 console.log(nums) // [1, 2, 3]
 ```
