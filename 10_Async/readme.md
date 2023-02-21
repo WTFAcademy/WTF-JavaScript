@@ -10,7 +10,7 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-这一讲，我们介绍 JavaScript 中的异步，着重讲 `aync/await` 语法。
+这一讲，我们介绍 JavaScript 中的异步，着重讲 `async/await` 语法。
 
 ## 异步编程
 
@@ -28,7 +28,7 @@ function callback() {
 }
 
 setTimeout(callback, 1000);
-console.log("hello");
+console.log('hello');
 // hello
 // Hello, JavaScript! (1 秒后输出)
 ```
@@ -70,7 +70,7 @@ const promise = new Promise((resolve, reject) => {
 promise.then((value) => {
   console.log(value);
 })
-console.log("hello Promise");
+console.log('hello Promise');
 // hello Promise
 // Hello, JavaScript Promise! (1 秒后输出)
 ```
@@ -87,21 +87,23 @@ async/await 是 `Promise` 的语法糖，让异步编程更易于理解和使用
 
 ```js
 async function hello() {
-  console.log("Hello, JavaScript async!");
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Hello, JavaScript async!');
+    }, 1000)
+  })
 }
-
-console.log(hello());
-// Promise {<fulfilled>: 'Hello, JavaScript async!'}
 ```
 
 ### await 关键字
 
-`await` 关键字**只能在** `async` 函数内工作，作用是让 JavaScript 引擎等待直到 `Promise` 完成并返回结果。它可以用于修饰 `async` 函数或 `Promise`。
+`await` 关键字**只能在** `async` 函数内工作，一般情况下，`await` 后跟随一个 `Promise` 对象，作用是让 JavaScript 引擎等待直到 `Promise` 完成并返回结果。
 
 ```js
 async function helloAwait() {
   const value = await hello();
-  console.log("hello await");
+  console.log(value);
+  console.log('hello await');
 }
 helloAwait()
 // Hello, JavaScript async! (1 秒后输出)
