@@ -64,7 +64,7 @@ console.log(y); // 0
 有时我们需要进行多次判断，可以通过使用  `else-if` 语句实现：
 
 ```js
-let z = 2;
+const z = 2;
 
 if (z === 0) {
   console.log('x 的值为 0');
@@ -83,7 +83,7 @@ if (z === 0) {
 
 ```js
 // 返回 x 和 z 之中更大的数
-let bigger = x < z ? z : x;
+const bigger = x < z ? z : x;
 console.log(bigger);
 ```
 

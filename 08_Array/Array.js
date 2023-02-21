@@ -1,17 +1,17 @@
 // 定义
 // 没有元素的空数组
-let empty = [];
+const empty = [];
 // 存储三个字符串的数组
-let courses = ["Solidity", "Etherjs", "JavaScript"];
+const courses = ["Solidity", "Etherjs", "JavaScript"];
 // 存储不同数据类型的数组
-let mix = [1,'WTF',true];
+const mix = [1,'WTF',true];
 // complex是一个数组，包含两个元素，每个元素都是另外一个数组
-let complex = [courses, mix];
-let nested = [[1, 2], [1, 1, 1]];
+const complex = [courses, mix];
+const nested = [[1, 2], [1, 1, 1]];
 
 
 // 读写
-let arr = [1,2,3,["Solidity",true]]
+const arr = [1,2,3,["Solidity",true]]
 // 读取第 0 个元素
 console.log(arr[0])  // 1
 // 读取嵌套数组第 0 个元素
@@ -23,7 +23,7 @@ console.log(arr) //[1, 6, 3, Array(2)]
 console.log(arr.length) // 4
 
 // 遍历数组
-let numArr = [5, 8, 9, 11, 55];
+const numArr = [5, 8, 9, 11, 55];
 let average = 0;
 for(let i = 0; i < numArr.length; i++){
   average += numArr[i] / numArr.length
@@ -31,10 +31,10 @@ for(let i = 0; i < numArr.length; i++){
 console.log(`平均值为: ${average}`) // 17.6
 
 // 增加和删除
-let nums = [1,2,3]
+const nums = [1,2,3]
 nums.push(4)
 console.log(nums) // [1, 2, 3, 4]
 // pop方法会返回被弹出的元素
-let last = nums.pop()
+const last = nums.pop()
 console.log(last) // 4  弹出
 console.log(nums) // [1, 2, 3]

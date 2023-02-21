@@ -34,7 +34,7 @@ function foo(input){
 `foo()` 看起来有点没用，下面我们丰富一下函数体，让它完成更多功能。
 ```js
 function bar(input){
-    let output = input * 2;
+    const output = input * 2;
     return output;
 }
 // bar(5) 将返回 10
@@ -62,7 +62,7 @@ sum(5, 6); // 返回 11
 
 ```js
 function sumCall(x, y){
-    let output = sum(x, y)
+    const output = sum(x, y)
     return output;
 }
 ```
@@ -75,7 +75,7 @@ function sumCall(x, y){
 1. 函数表达式: 它与上面的方式声明几乎一样，唯一的区别就是函数名 `sum1` 被提到前面作为变量，并且多了赋值操作。使用起来也是一样的。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function#%E8%AF%AD%E6%B3%95)
 
     ```js
-    let sum1 = function(x, y){
+    const sum1 = function(x, y){
         return x + y;
     }
     ```
@@ -83,7 +83,7 @@ function sumCall(x, y){
 2. 箭头函数: ES6 版本新增了使用箭头语法 `=>` 来定义函数，这种语法比另外两种方法更为简洁。更多内容见 [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
     ```js
-    let sum2 = (x, y) => {
+    const sum2 = (x, y) => {
         return x + y;
     }
     ```
