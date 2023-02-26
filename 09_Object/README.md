@@ -118,7 +118,7 @@ function isDev(obj){
 
 const obj1 = {
   name: "0xAA",
-  isDeveloper: true;
+  isDeveloper: true,
 }
 const obj2 = {
   name: "Trump",
