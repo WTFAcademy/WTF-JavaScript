@@ -117,11 +117,11 @@ function isDev(obj){
 }
 
 const obj1 = {
-  name: "0xAA";
-  isDeveloper: true;
+  name: "0xAA",
+  isDeveloper: true,
 }
 const obj2 = {
-  name: "Trump";
+  name: "Trump",
 }
 console.log(isDev(obj1)); // 应该输出 true
 console.log(isDev(obj2)); // 应该输出 false
