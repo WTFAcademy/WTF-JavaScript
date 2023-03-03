@@ -68,6 +68,39 @@ function sumCall(x, y){
 ```
 > `Tips`: 如果仅使用 `函数名` 的话，会返回该函数对象，而非返回值，因此调用函数时一定要加括号和参数。
 
+## 函数名补充
+函数名其实就是指向函数的指针, 这意味着一个函数可以有多个名称
+
+```js
+function sum(num1, num2) {
+  return num1 + num2;
+}
+console.log(sum(1, 2));//3
+
+let antherSum = sum;
+console.log(antherSum(1, 2));//3
+
+sum = null;
+console.log(antherSum(1, 2));//3
+```
+这段代码定义了一个名为sum()的函数，然后又声明了一个变量anotherSum ，并将它的值设置为等于sum。这个时候它们都指向同一个函数。调用anotherSum()也可以返回结果。把sum设置为null之后,就切断了它与函数之间的关联.。但是anotherSum()还是可以照样调用。
+
+
+
+ES6的所有函数都会暴露一个只读的name属性，其中包含关于函数的信息。多数情况下，这个属性中保存的就是一个函数标识符，或者说是一个字符串化的变量名。即使函数没有名称，也会如实显示成空字符串，看下面的例子:
+
+```js
+function foo() {}
+let bar = function () {};
+let baz = () => {};
+
+console.log(foo.name); //foo
+console.log(bar.name); //bar
+console.log(baz.name); //baz
+console.log((() => {}).name); //
+console.log(new Function().name); //anonymous
+```
+
 ## 函数表达式和箭头函数（选读）
 
 下面我们介绍另外两种定义函数的方法。
