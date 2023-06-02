@@ -10,12 +10,7 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-## 什么是Node.js?
-
 Node.js 或 Node 是一个开源的、跨平台的 JavaScript 运行环境，它让 JavaScript 可以脱离浏览器环境在服务器上运行。在这一章中，我们将介绍 Node.js 的基础知识，包括如何安装和使用 Node.js，以及如何使用 npm（Node 包管理器）管理项目的依赖。
-
-### 什么是JavaScript运行时环境？
-就是指可以运行JavaScript的一种平台，比如你在电脑的txt中写了一段JavaScript代码，但是并不能运行，得不到你想要的结果。你得把他粘贴到Chrome中的控制台中，然后回车就可以拿到你想要的结果。这时候Chorme就是JavaScript的运行环境。或者把txt文件的后缀改成.js。然后打开终端输入xxx.js，也可以拿到你想要的运行结果。这时候Node就是JavaScript的运行环境。
 
 ## 安装Node.js
 
