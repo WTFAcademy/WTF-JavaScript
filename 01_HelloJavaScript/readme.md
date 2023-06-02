@@ -16,11 +16,43 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 JavaScript 是一种用于与网页元素交互的轻量型编程语言。前端开发者可以将它与 HTML/CSS 结合并增强网页的功能，例如动态更新网页内容，网页交互等。现在，JavaScript 也可以在服务器（后端）通过 Node.js 运行，用于更新数据库、文件系统等。
 
-## 为什么要学习 `JavaScript`?
+## JavaScript的历史
+
+JavaScript是一种由Netscape公司在1995年开发的脚本语言。Netscape的布兰登·艾希（Brendan Eich）在仅仅10天内设计出了这种语言的初版，起初命名为Mocha，之后更名为LiveScript，最后在1995年底与Sun Microsystems公司联手宣布更名为JavaScript，当时的目的是与那时广受欢迎的Java语言相吸引。
+
+尽管Java和JavaScript的名字相似，但两者在设计理念和语法上有着显著的差异。JavaScript设计之初主要是为了在浏览器中执行简单的任务，如表单验证、动画效果等，而Java是一种用于构建大型企业级应用的全功能编程语言。
+
+1997年，JavaScript被提交到ECMA国际（European Computer Manufacturers Association）并成为ECMAScript的标准。这个标准从那时起就一直在不断的发展和进化，现在我们通常说的JavaScript其实就是遵循ECMAScript标准的语言。
+
+## 为什么要学习JavaScript?
+
+JavaScript在现代Web开发中起着至关重要的作用，它是浏览器中唯一的编程语言。主要的作用包括：
+
+1. **动态交互**：JavaScript使网页具有动态性，例如，可以在用户不需要重新加载整个页面的情况下对网页的一部分进行更新，或响应用户的点击，滚动等操作。
+
+2. **操作DOM**：JavaScript可以操作网页上的DOM元素，动态更改网页内容。
+
+3. **前端验证**：JavaScript可以在数据发送到服务器之前进行前端验证，提高数据的正确性。
+
+4. **Ajax通信**：通过JavaScript的Ajax，我们可以在后台与服务器进行数据交互，创建动态而且实时的网页。
+
+近年来，JavaScript的使用范围已经扩展到了浏览器之外。例如，Node.js是一个基于JavaScript的开源服务器框架，使得JavaScript也可以用于服务器端的开发。而React Native、Ionic等框架则让JavaScript成为了移动应用开发的工具。同时，很多新兴的前端框架和库，如React.js、Vue.js、Angular.js都是基于JavaScript的，极大地推动了前端开发的进步。
 
 根据2022年[Stack Overflow社区年度调查显示](https://survey.stackoverflow.co/2022/#most-popular-technologies-language)，JavaScript 已经连续十年成为最受开发者欢迎的一门编程语言。学习 JavaScript 不仅是普通 web 开发者的必备技能，同时也是全栈 web3 学习者的必要知识。
 
 ![1-1](./img/1-1.png)
+
+## JavaScript与其他语言的比较
+
+虽然JavaScript和其他编程语言（例如Python和Java）在语法和设计上存在一些差异，但JavaScript的基本组件（如变量，函数，循环和条件语句）与其他语言非常相似。然而，JavaScript有一些独特的特性，使得它在Web开发领域独树一帜。
+
+- **动态类型**：JavaScript是一种动态类型的语言，这意味着你不需要预先声明变量的类型。一个变量可能开始时是一个数字，稍后可以变成一个字符串。
+
+- **解释型语言**：与需要先编译后运行的语言（如C++和Java）不同，JavaScript是一种解释型语言。这意味着代码在运行时被解释和执行，不需要进行预编译。
+
+- **基于原型的对象模型**：不同于基于类的语言（如Java），JavaScript使用的是基于原型的对象模型。在JavaScript中，对象可以继承其他对象的属性，称为原型链。
+
+- **第一类函数**：在JavaScript中，函数是第一类对象，这意味着函数可以作为其他函数的参数，也可以作为其他函数的返回值。
 
 ## 开发工具
 
@@ -28,7 +60,7 @@ JavaScript 是一种用于与网页元素交互的轻量型编程语言。前端
 
 ![](./img/1-2.png)
 
-[playcode](https://playcode.io/)是一个在线编译`javascript`的平台，你不需要在本地安装任何程序就可以运行`.js`文件，非常方便。本教程将使用 playcode 进行代码演示，未来也将在 [wtf.academy](https://wtf.academy) 的教程中嵌入可互动代码模块。你可以在[链接](https://playcode.io/1051873)上找到这一讲的代码。
+[playcode](https://playcode.io/)是一个JavaScript的在线编译平台，你不需要在本地安装任何程序就可以运行`.js`文件，非常方便。本教程将使用 playcode 进行代码演示，未来也将在 [wtf.academy](https://wtf.academy) 的教程中嵌入可互动代码模块。你可以在[链接](https://playcode.io/1051873)上找到这一讲的代码。
 
 ![](./img/1-3.png)
 
