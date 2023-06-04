@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程 11. Node.js：JavaScript 的服务器端运行环境
+# WTF JavaScript 极简教程 11. Node.js
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
