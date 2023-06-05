@@ -7,9 +7,9 @@
 `javascript`在线编译平台：
 * [playcode.io](https://playcode.io)
 
-### VScode本地运行
+### IDE本地运行
 
-需要安装[VSCode](https://code.visualstudio.com/download)和[Node.js](https://nodejs.org/zh-cn/download/)，然后运行：
+需要安装如[VSCode](https://code.visualstudio.com/download)和[WebStorm](https://www.jetbrains.com/webstorm/)的编辑器，以及[Node.js](https://nodejs.org/zh-cn/download/)，然后运行：
 
 ```shell
 node 01_HelloJavaScript/HelloJavaScript.js
