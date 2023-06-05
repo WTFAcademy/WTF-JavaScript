@@ -64,9 +64,9 @@ JavaScript在现代Web开发中起着至关重要的作用，它是浏览器中�
 
 ![](./img/1-3.png)
 
-### 2. VS Code
+### 2. VS Code & WebStorm
 
-你可以使用本地 [VS Code](https://code.visualstudio.com/download) 进行开发，需要安装[Node.js](https://nodejs.org/zh-cn/download/)，我们会在之后的章节介绍如何使用它。
+你可以使用本地 [VS Code](https://code.visualstudio.com/download) 或[WebStorm](https://www.jetbrains.com/webstorm/)进行开发，需要安装[Node.js](https://nodejs.org/zh-cn/download/)，我们会在之后的章节介绍如何使用它。
 
 ## Hello JavaScript!
 
