@@ -74,13 +74,13 @@ setTimeout
 解释：
 1. 首先，代码执行到`console.log('script start')`，输出 "script start"。
 2. 然后，遇到`setTimeout`，将其回调函数推入宏任务队列中。
-3. 接着，遇到`Promise.resolve().then()`，将第一个 then 回调函数推入微任务队列中。
+3. 接着，遇到`Promise.resolve().then()`，将第一个`then`回调函数推入微任务队列中。
 4. 继续执行，遇到第二个`then`回调函数，将其推入微任务队列中。
-5. 执行到 console.log('script end')，输出 "script end"。
+5. 执行到`console.log('script end')`，输出 "script end"。
 6. 当前宏任务（script主线程代码）执行完毕，事件循环开始处理微任务队列，按顺序执行微任务。
 7. 执行第一个微任务，输出 "promise1"。
 8. 执行第二个微任务，输出 "promise2"。
 9. 微任务执行完毕，事件循环开始处理下一个宏任务。
-10. 从宏任务队列中取出 setTimeout 的回调函数，输出 "setTimeout"。
+10. 从宏任务队列中取出`setTimeout`的回调函数，输出 "setTimeout"。
 
 总的来说，理解微任务和宏任务以及它们在事件循环中的角色，是理解 JavaScript 异步编程的关键。
