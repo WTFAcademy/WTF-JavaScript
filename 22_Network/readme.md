@@ -19,14 +19,26 @@ AJAX（Asynchronous JavaScript and XML）是一种在无需刷新整个页面的
 以下是一个 AJAX 的例子：
 
 ```javascript
+// 创建 XMLHttpRequest 对象
 let xhr = new XMLHttpRequest();
-xhr.open("GET", 'https://api.example.com/data', true);
+
+// 指定请求的方法和 URL
+xhr.open("GET", 'https://api.github.com/search/users?q=amazingang', true);
+
+// 设置回调函数，处理请求的响应
 xhr.onreadystatechange = function () {
+  // 请求成功
   if (xhr.readyState == 4 && xhr.status == 200)
+    // 处理响应数据
     console.log(JSON.parse(xhr.responseText));
 }
+// 发送请求
 xhr.send();
 ```
+
+在浏览器的console中执行以上代码，会打印出名字中包含`amazingang`的github用户
+
+![ajax](./img/22-1.png)
 
 ## Fetch API
 
@@ -40,6 +52,8 @@ fetch('https://api.example.com/data')
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 ```
+
+![fetch](./img/22-2.png)
 
 ## Axios
 
@@ -58,5 +72,7 @@ axios.get('https://api.example.com/data')
     console.log(error);
   });
 ```
+
+![axios](./img/22-3.png)
 
 以上是 AJAX，Fetch API 和 axios 的简单介绍。在实际开发中，你可以根据你的需求和场景，选择最适合你的技术进行网络请求。
