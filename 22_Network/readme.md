@@ -47,7 +47,7 @@ Fetch API 提供了一种简单、合理的方式来跨网络异步获取资源�
 以下是一个 Fetch API 的例子：
 
 ```javascript
-fetch('https://api.example.com/data')
+fetch('https://api.github.com/search/users?q=amazingang')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
@@ -64,7 +64,7 @@ Axios 是一个基于 Promise 的 HTTP 库，可以用在浏览器和 node.js �
 ```javascript
 const axios = require('axios');
 
-axios.get('https://api.example.com/data')
+axios.get('https://api.github.com/search/users?q=amazingang')
   .then(function (response) {
     console.log(response.data);
   })
