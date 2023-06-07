@@ -75,4 +75,6 @@ axios.get('https://api.github.com/search/users?q=amazingang')
 
 ![axios](./img/22-3.png)
 
+## 总结
+
 以上是 AJAX，Fetch API 和 axios 的简单介绍。在实际开发中，你可以根据你的需求和场景，选择最适合你的技术进行网络请求。
