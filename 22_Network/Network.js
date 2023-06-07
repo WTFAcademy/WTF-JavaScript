@@ -16,7 +16,7 @@ xhr.onreadystatechange = function () {
 // 发送请求
 xhr.send();
 
-fetch('https://api.example.com/data')
+fetch('https://api.github.com/search/users?q=amazingang')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
