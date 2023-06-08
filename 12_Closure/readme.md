@@ -12,52 +12,55 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 闭包是 JavaScript 中的一种重要概念和关键特性。了解和理解闭包对于编写高效且高质量的 JavaScript 代码十分关键。在这一章，我们将详细讲解闭包的概念，理解它的运作方式以及它在实际开发中的应用。
 
-## 闭包的定义
+## 定义
 
-闭包是 JavaScript 中的一种特性，指的是一个函数可以访问并操作它自己被定义时的作用域里的变量，即使这个函数当前正在另一个作用域中执行。
+**闭包**指的是那些引用了另一个函数作用域中变量的函数，通常是在嵌套函数中实现的。只看定义可能有点难懂，现在我们只需要知道这是一个关于**作用域**相关的问题就行。接下来我们会举一个简单的例子来快速理解闭包。
 
-## 闭包的创建
+## 应用
 
-在 JavaScript 中，闭包的创建并不需要进行任何特殊的操作，任何函数都有可能创建闭包。通常情况下，如果一个函数在其定义的作用域之外被调用，而这个函数引用了其定义作用域中的变量，那么这个函数就会形成一个闭包。
+闭包的应用非常广泛，其中最常见的用途是创建私有变量和实现数据封装。假设我们有这样一个场景：领导让你统计一个业务函数累计被调用的次数。于是你撸起袖子写出了以下代码
 
-例如，以下代码就创建了一个闭包：
+```js
+let count = 0; // 用于统计func函数被调用次数
 
-```javascript
-function outerFunction() {
-  let variableInOuterFunction = 'Hello, World!';
-  
-  function innerFunction() {
-    console.log(variableInOuterFunction);
-  }
-  
-  return innerFunction;
+function func() {
+  count++;
+  // 业务逻辑
+  return;
 }
 
-let closure = outerFunction();
-closure();  // 输出 'Hello, World!'
+console.log(count);
 ```
 
-## 闭包的应用
+正当你胸有成竹地测试时，发现 `count` 的值出现了一些问题，有时候甚至会变少，这时候你就开始排查问题，终于发现了这么一段代码：
 
-闭包的应用非常广泛，其中最常见的用途是创建私有变量和实现数据封装。
+```js
+var count = 0; // 用于统计xxx的数量
 
-例如，我们可以利用闭包创建一个计数器：
+function func2() {
+  count = xxx; // 改变 count 的业务代码
+}
+```
 
-```javascript
-function createCounter() {
+这时候你恍然大悟，原来同事之前就在全局定义了一个 `count` 用于统计其他业务。第一时间你想到了给自己的 `count` 改个名，改成 `count2` 。当然，这样也可以解决眼下的问题，但是，有没有更好的办法呢。这时候，闭包就可以发挥它的作用了，下面是用闭包实现
+
+```js
+function func2() {
   let count = 0;
-  
-  return function() {
-    return ++count;
+  return function () {
+    count++;
+    return count;
   };
 }
 
-let counter = createCounter();
+let addCount = func2();
 
-console.log(counter());  // 输出 '1'
-console.log(counter());  // 输出 '2'
+console.log(addCount()); // 1
+console.log(addCount()); // 2
 ```
 
-在这个例子中，`counter` 是一个闭包，它可以访问并操作 `createCounter` 函数中的 `count` 变量。因为 `count` 变量无法从 `createCounter` 函数的外部访问，所以它就像一个私有变量。
+通过以上代码，每次调用 `addCount` 函数都会使 `count` 的值递增1，并且返回最新的 `count` 值。通过以上代码，无需改变变量名，保证了代码可读性的同时解决了业务问题。
 
-总结一下，闭包是 JavaScript 中的一个重要特性，理解并熟练掌握闭包对于编写高效且高质量的 JavaScript 代码是非常关键的。在接下来的章节中，我们将继续探讨 JavaScript 中的一些高级主题，包括高级函数、异步编程以及模块化等等。
+## 总结
+
+闭包是 JavaScript 中的一个重要特性，就是函数不在定义的词法作用域内被调用，但是仍然可以访问词法作用域中定义的变量。它的最大用处有两个，一个是前面提到的可以防止变量被污染，另一个就是让这些变量的值始终保持在内存中。理解并熟练掌握闭包对于编写高效且高质量的 JavaScript 代码是非常关键的。在接下来的章节中，我们将继续探讨 JavaScript 中的一些高级主题，包括高级函数、异步编程以及模块化等等。
