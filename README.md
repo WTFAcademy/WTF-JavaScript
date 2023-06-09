@@ -40,6 +40,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第12讲：闭包**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/12_Closure)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/12_Closure/readme.md)】
 
+**第13讲：引用类型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/13_Reference)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/13_Reference/readme.md)】
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">
