@@ -45,7 +45,8 @@ console.log(obj1.value); // 20
 对于引用类型，如果你想要得到一个新的，完全独立的复制，而不是一个引用，你需要进行深拷贝。深拷贝就是将一个对象的所有元素，包括属性和子对象都进行复制，新的对象和原来的对象没有任何关联。在 JavaScript 中，我们可以通过 `JSON.parse` 和 `JSON.stringify` 方法：
 
 ```js
-let a = {
+// 深拷贝
+let x = {
   name: "wtf",
   age: 18,
   arr: [],
@@ -53,11 +54,13 @@ let a = {
     a: 1,
   },
 };
-let b = JSON.parse(JSON.stringify(a));
 
-a.obj.a = 2;
+let y = JSON.parse(JSON.stringify(a));
 
-console.log(a.obj.a, b.obj.a);.a, b.obj.a)
+y.obj.a = 2;
+
+console.log("x: ", x);
+console.log("y: ", y);
 ```
 
 虽然大多数时候这么使用是没有问题的，但这种方式还是有很多缺点的
