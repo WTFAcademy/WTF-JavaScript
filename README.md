@@ -42,6 +42,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第13讲：引用类型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/13_Reference)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/13_Reference/readme.md)】
 
+**第14讲：原型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/14_Prototype)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/14_Prototype/readme.md)】
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">
