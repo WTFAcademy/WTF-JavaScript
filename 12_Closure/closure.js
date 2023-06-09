@@ -1,3 +1,15 @@
+// 例子
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable){
+    console.log('outerVariable:', outerVariable);
+    console.log('innerVariable:', innerVariable);
+  }
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside'); // logs: "outerVariable: outside" and "innerVariable: inside"
+
+
 // 一般方式实现
 let count = 0; // 用于统计func函数被调用次数
 
