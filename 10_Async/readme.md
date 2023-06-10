@@ -115,6 +115,7 @@ helloAwait()
 ### async/await 例子
 
 ![](./img/10-3.png)
+
 下面，我们演示如何使用 `async/await` 语法来读取非常流行的无聊猿（BAYC）NFT的元数据。
 
 1. NFT 元数据是构成 NFT 内容的一组数据，通常以 [JSON](https://zh.wikipedia.org/wiki/JSON) 格式保存在网络上。比如下面 `url` 中的 [ipfs](https://gateway.ipfscdn.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1) 链接保存着 `id = 1` 的BAYC元数据，包括小图片网址和属性（嘴、头发、衣服等特征）。
