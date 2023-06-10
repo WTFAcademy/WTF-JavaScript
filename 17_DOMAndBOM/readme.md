@@ -20,11 +20,13 @@ DOM（文档对象模型）是一种用于表示和操作 HTML 和 XML 文档的
 
 首先，你需要知道如何选择你要操作的元素。JavaScript 提供了多种方式来选择元素：
 
-- `getElementById`：根据元素的 id 选择元素。
-- `getElementsByClassName`：根据元素的类名选择元素，返回一个包含所有匹配元素的 NodeList。
-- `getElementsByTagName`：根据元素的标签名选择元素，返回一个包含所有匹配元素的 NodeList。
-- `querySelector`：使用 CSS 选择器选择元素，只返回第一个匹配的元素。
-- `querySelectorAll`：使用 CSS 选择器选择元素，返回一个包含所有匹配元素的 NodeList。
+| 方法                      | 描述                                                                |
+|-------------------------|---------------------------------------------------------------------|
+| getElementById          | 根据元素的 id 选择元素。                                            |
+| getElementsByClassName  | 根据元素的类名选择元素，返回一个包含所有匹配元素的 NodeList。      |
+| getElementsByTagName    | 根据元素的标签名选择元素，返回一个包含所有匹配元素的 NodeList。    |
+| querySelector           | 使用 CSS 选择器选择元素，只返回第一个匹配的元素。                  |
+| querySelectorAll        | 使用 CSS 选择器选择元素，返回一个包含所有匹配元素的 NodeList。     |
 
 例如：
 
