@@ -44,6 +44,24 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第14讲：原型**：【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/14_Prototype)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/14_Prototype/readme.md)】
 
+**第15讲: 继承**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/15_Inheritance)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/15_Inheritance/readme.md)】
+
+**第16讲: 事件**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/16_Event)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/16_Event/readme.md)】
+
+**第17讲: DOM 和 BOM**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/17_DOMAndBOM)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/17_DOMAndBOM/readme.md)】
+
+**第18讲: 异常处理**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/18_Error)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/18_Error/readme.md)】
+
+**第19讲: 单元测试**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/19_UnitTest)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/19_UnitTest/readme.md)】
+
+**第20讲: ES6**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/20_ES6)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/20_ES6/readme.md)】
+
+**第21讲: 事件循环**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/21_EventLoop)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/21_EventLoop/readme.md)】
+
+**第22讲: 网络请求**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/22_Network)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/22_Network/readme.md)】
+
+
+
 ## WTF JavaScript贡献者
 <div align="center">
   <h4 align="center">
