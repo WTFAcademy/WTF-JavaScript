@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程 16. 事件
+# WTF JavaScript 极简教程 17. 事件
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 

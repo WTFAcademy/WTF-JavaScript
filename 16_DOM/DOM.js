@@ -1,8 +1,9 @@
 const el = document.getElementById('myId')
+const elBySelector = document.querySelector('#myId')
+
 const els = document.getElementsByClassName('myClass')
-// const els = document.getElementsByTagName('div')
-// const el = document.querySelector('#myId')
-// const els = document.querySelectorAll('.myClass')
+const elsByTag = document.getElementsByTagName('div')
+const elsBySelectorAll = document.querySelectorAll('.myClass')
 
 el.innerHTML = '<strong>Hello, World!</strong>' // 修改 HTML 内容
 el.textContent = 'Hello, World!' // 修改文本内容

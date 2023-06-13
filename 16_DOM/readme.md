@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程 17. DOM 和 BOM
+# WTF JavaScript 极简教程 16. DOM
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -11,6 +11,26 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 ---
 
 在 JavaScript 中，DOM（文档对象模型）和 BOM（浏览器对象模型）是两个重要的概念。DOM 用于访问和操作 HTML 文档中的元素，而 BOM 则提供了与浏览器窗口进行交互的方法和属性。本节将介绍 DOM 和 BOM 的基本概念，帮助您更好地理解和运用它们。
+
+这一讲所使用的 HTML 代码:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM And BOM</title>
+</head>
+<body>
+  <div id="myId"></div>
+  <div class="myClass"></div>
+  <div class="myClass"></div>
+  <script src="./DOMAndBOM.js"></script>
+</body>
+</html>
+```
 
 ## DOM
 
@@ -31,11 +51,12 @@ DOM（文档对象模型）是一种用于表示和操作 HTML 和 XML 文档的
 例如：
 
 ```javascript
-const el = document.getElementById('myId')
-const els = document.getElementsByClassName('myClass')
-const els = document.getElementsByTagName('div')
-const el = document.querySelector('#myId')
-const els = document.querySelectorAll('.myClass')
+const el = document.getElementById('myId') // 选择 id 为 'myId' 的 div 元素
+const elBySelector = document.querySelector('#myId') // 选择 selector 为 'myId' 的 div 元素，值返回第一个匹配的元素
+
+const els = document.getElementsByClassName('myClass') // 选择所有 class 为 'myClass' 的 div 元素
+const elsByTag = document.getElementsByTagName('div')
+const elsBySelectorAll = document.querySelectorAll('.myClass')
 ```
 
 ### 修改内容
