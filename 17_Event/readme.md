@@ -12,6 +12,30 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 在 Web 开发中，事件是用户或浏览器自身执行的某种动作，例如点击按钮，提交表单，或者触发鼠标悬停效果等等。理解事件处理是创建交互式网站的关键。
 
+这一讲所使用的 HTML 代码:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+</head>
+<body>
+  <button>点击我！</button>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script src="./Event.js"></script>
+</body>
+</html>
+```
+
 ## 事件监听器
 
 在 JavaScript 中，我们使用事件监听器（Event Listener）来处理这些事件。事件监听器是一个函数，它会在特定事件发生时被触发。我们使用 `addEventListener` 方法来指定事件监听器。以下是一个简单的点击事件监听器示例：
@@ -91,7 +115,7 @@ document.addEventListener('myEvent', (event) => {
   console.log('自定义事件被触发了：', event.detail.message)
 })
 
-document.dispatchEvent(customEvent)
+document.dispatchEvent(customEvent) // 触发事件
 ```
 
 在这个例子中，我们创建了一个名为 myEvent 的自定义事件，并在 document 上触发了这个事件。然后我们在 document 上添加了一个事件监听器，当 myEvent 事件被触发时，会打印出事件的详细信息。
