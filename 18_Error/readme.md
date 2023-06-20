@@ -67,6 +67,8 @@ try {
 }
 ```
 
+上面的代码中，我们用到了 JavaScript 的 `Error` 类，它是所有异常的基类。当运行时错误产生时，JavaScript 会抛出一个 `Error` 对象。这个 `Error` 对象有两个主要的属性：`name` 和 `message`。其中 `name` 是异常的名字（例如 "TypeError"，"ReferenceError" 等），`message` 是描述异常的具体信息的字符串。
+
 ## 调试：浏览器的开发者工具
 
 大部分的浏览器都有内置的开发者工具，你可以使用它们来调试你的 JavaScript 代码。开发者工具提供了许多强大的功能，包括断点、单步执行、查看变量值等等。
