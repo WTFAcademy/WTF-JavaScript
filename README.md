@@ -50,6 +50,8 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第17讲: 事件**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/17_Event)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/17_Event/readme.md)】
 
+<!---
+
 **第18讲: 异常处理**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/18_Error)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/18_Error/readme.md)】
 
 **第19讲: 单元测试**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/19_UnitTest)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/19_UnitTest/readme.md)】
@@ -60,7 +62,7 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第22讲: 网络请求**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/22_Network)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/22_Network/readme.md)】
 
-
+-->
 
 ## WTF JavaScript贡献者
 <div align="center">
