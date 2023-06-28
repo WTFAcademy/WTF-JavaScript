@@ -10,11 +10,34 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-在 JavaScript 编程中，错误处理和调试是必备的技能。无论你的代码编写得多么完美，错误总是难以避免的。在这一章节中，我们将介绍如何使用 try...catch 语句处理错误，以及如何使用浏览器的开发者工具进行调试。
+在 JavaScript 编程中，错误处理和调试是必备的技能。无论你的代码编写得多么完美，错误总是难以避免的。JavaScript 提供了一套完善的错误处理机制，我们可以通过它来处理运行时的错误。在这一章节中，我们将介绍JavaScript 中的错误处理机制，以及如何使用浏览器的开发者工具调试程序。
 
-## try...catch 语句
+## JavaScript 错误对象
 
-JavaScript 提供了 `try...catch` 语句来捕获和处理运行时错误。你可以将可能会抛出错误的代码放在 `try` 块中，然后在 `catch` 块中处理错误。
+JavaScript 有一种特殊的对象类型，名为 `Error`，它用于表示在程序执行过程中发生的错误。当 JavaScript 引擎遇到错误时，会抛出一个 `Error` 对象。
+
+`Error` 对象包含两个主要的属性：`name` 和 `message`。`name` 属性表示错误的名称，`message` 属性则包含了错误的详细信息。
+
+创建 `Error` 对象的语法如下：
+
+```javascript
+let error = new Error("This is an error message");
+console.log(error.name); // "Error"
+console.log(error.message); // "This is an error message"
+```
+
+## 抛出错误
+
+在 JavaScript 中，我们可以使用 `throw` 关键字来手动抛出一个错误。当我们抛出一个错误时，程序的执行会立即停止，JavaScript 引擎会寻找处理这个错误的代码。如果没有找到任何错误处理代码，程序就会完全停止执行。
+
+```javascript
+throw new Error("This is an error message");
+console.log("This will not be logged"); // 该行代码不会被执行
+```
+
+## 捕获错误
+
+JavaScript 提供了 `try...catch` 语句来捕获和处理错误。在 `try` 块中的代码发生错误时，控制流会立即跳到对应的 `catch` 块。
 
 ```javascript
 try {
@@ -27,11 +50,11 @@ try {
 }
 ```
 
-如果 `try` 块中的代码没有抛出错误，那么 `catch` 块将不会被执行。如果 `try` 块中的代码抛出了错误，那么 `catch` 块将被执行，你可以在其中访问到错误对象。
+在这个例子中，我们在 `try` 块中抛出了一个错误，然后在 `catch` 块中捕获并处理了这个错误。
 
 ## finally 语句
 
-`try...catch` 语句还可以包含一个 `finally` 块，它会在 `try` 块中的代码执行完毕后被执行，无论是否抛出了错误。
+`try...catch` 结构还可以包含一个 `finally` 块。无论 `try` 块中的代码是否抛出错误，`finally` 块中的代码总是会被执行。
 
 ```javascript
 try {
@@ -47,27 +70,7 @@ try {
 }
 ```
 
-## throw 语句
-
-你也可以使用 `throw` 语句来抛出一个错误。`throw` 语句接受一个错误对象作为参数，你可以在其中指定错误的类型和错误的信息。
-
-```javascript
-function divide(x, y) {
-  if (y === 0) {
-    throw new Error('除数不能为 0')
-  }
-  return x / y
-}
-
-try {
-  const result = divide(10, 0)
-  console.log(result)
-} catch (error) {
-  console.log(error.message)
-}
-```
-
-上面的代码中，我们用到了 JavaScript 的 `Error` 类，它是所有异常的基类。当运行时错误产生时，JavaScript 会抛出一个 `Error` 对象。这个 `Error` 对象有两个主要的属性：`name` 和 `message`。其中 `name` 是异常的名字（例如 "TypeError"，"ReferenceError" 等），`message` 是描述异常的具体信息的字符串。
+在上面的例子中，无论 `try` 块中的代码是否抛出错误，`finally` 块中的代码总是会被执行。
 
 ## 调试：浏览器的开发者工具
 
@@ -92,4 +95,4 @@ try {
 
 ## 总结
 
-JavaScript 错误处理是一项重要的任务可以帮助我们避免程序崩溃或产生不良影响。当我们编写 JavaScript 代码时，应该时刻考虑错误处理，并编写适当的代码来处理可能出的错误。另外，我们还可以借助浏览器的开发者工具来调试我们的代码。
+在本教程中，我们详细介绍了 JavaScript 中的错误处理机制，包括如何创建和抛出错误，以及如何捕获和处理错误。当我们编写 JavaScript 代码时，应该时刻考虑错误处理，并编写适当的代码来处理可能出的错误。另外，我们还可以借助浏览器的开发者工具来调试我们的代码。

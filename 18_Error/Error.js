@@ -1,3 +1,7 @@
+let error = new Error("This is an error message");
+console.log(error.name); // "Error"
+console.log(error.message); // "This is an error message"
+
 try {
   // 可能会抛出错误的代码
   const a = 1
@@ -17,18 +21,4 @@ try {
 } finally {
   // 无论是否抛出错误，这里都会被执行
   console.log('执行完毕')
-}
-
-function divide(x, y) {
-  if (y === 0) {
-    throw new Error('除数不能为 0')
-  }
-  return x / y
-}
-
-try {
-  const result = divide(10, 0)
-  console.log(result)
-} catch (error) {
-  console.log(error.message)
 }
