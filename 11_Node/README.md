@@ -14,7 +14,7 @@ Node.js 或 Node 是一个开源的、跨平台的 JavaScript 运行环境，它
 
 ## 安装Node.js
 
-首先，你需要在你的电脑上安装 Node.js。你可以从 Node.js 的官方网站（https://nodejs.org/zh-cn）下载对应你的操作系统的安装包，并按照提示进行安装。
+首先，你需要在你的电脑上安装 Node.js。你可以从 Node.js 的官方网站（https://nodejs.org/zh-cn） 下载对应你的操作系统的安装包，并按照提示进行安装。
 
 安装完成后，你可以在命令行中输入 `node -v` 来查看你的 Node.js 版本：
 

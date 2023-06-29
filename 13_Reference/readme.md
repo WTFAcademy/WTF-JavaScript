@@ -10,36 +10,69 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-在 JavaScript 中，数据类型可以分为两种大类：基本类型和引用类型。基本类型包括 Number, String, Boolean, Null, Undefined, 和 Symbol。这些类型的值都是不可变的。
+在 JavaScript 中，变量可以被定义为值类型（也称为基础类型）或引用类型。
 
-引用类型则是由多个值构成的对象。当你操作对象时，实际上是在操作对象的引用而不是实际的对象。因此，当你将一个对象赋值给一个新的变量时，赋的其实是该对象在内存中的地址，也就是说，新变量和原始变量引用的是同一个对象。因此，改变其中一个变量，就会影响到另一个变量。
+## 值类型
+
+值类型包括 Boolean、null、undefined、String、Number、BigInt 和 Symbol。这些类型的数据被存储在栈内存中。当你把一个值类型的变量赋值给另一个变量时，新变量会获得原始变量的一个完整复制。
+
+让我们来看一个例子：
+
+```javascript
+let a = 10;
+let b = a; // b 是 a 的复制
+a = 20;
+console.log(b); // 输出 10, b 的值并没有改变
+```
+
+## 引用类型
+
+引用类型包括 Object、Array、Function、Map、Set 等。这些类型的数据被存储在堆内存中，变量实际上存储的是指向堆内存中的该值的指针。当你把一个引用类型的变量赋值给另一个变量时，新变量得到的是对原始数据的一个引用，而不是一个完整的复制。这就意味着，如果我们改变了其中一个变量，另一个变量也会受到影响。
 
 ```javascript
 let obj1 = { value: 10 };
 let obj2 = obj1;
 obj2.value = 20;
-console.log(obj1.value);  // 输出 20
+console.log(obj1.value); // 20
 ```
 
 那么如果你想要复制一个对象，且让新的对象和原始对象没有任何关联该怎么办？这就需要进行深拷贝。
 
-## 深拷贝
+## 如何复制
 
-深拷贝就是将一个对象的所有元素，包括属性和子对象都进行复制，新的对象和原来的对象没有任何关联。
+对于值类型的变量，我们可以通过简单赋值的方式进行复制。
 
-在 JavaScript 中，实现深拷贝的一种简单方法是使用 JSON 对象的 `parse` 和 `stringify` 方法。
+对于引用类型，如果你想要得到一个新的，完全独立的复制，而不是一个引用，你需要进行深拷贝。深拷贝就是将一个对象的所有元素，包括属性和子对象都进行复制，新的对象和原来的对象没有任何关联。在 JavaScript 中，我们可以通过 `JSON.parse` 和 `JSON.stringify` 方法：
 
-```javascript
-let obj1 = { value: 10, child: { value: 20 } };
-let obj2 = JSON.parse(JSON.stringify(obj1));
-obj2.child.value = 30;
-console.log(obj1.child.value);  // 输出 20
+```js
+// 深拷贝
+let x = {
+  name: "wtf",
+  age: 18,
+  arr: [],
+  obj: {
+    a: 1,
+  },
+};
+
+let y = JSON.parse(JSON.stringify(a));
+
+y.obj.a = 2;
+
+console.log("x: ", x);
+console.log("y: ", y);
 ```
 
-在上述代码中，`JSON.stringify(obj1)` 会将 `obj1` 转换为 JSON 字符串，然后 `JSON.parse` 会将这个 JSON 字符串解析为一个新的对象。
+虽然大多数时候这么使用是没有问题的，但这种方式还是有很多缺点的
 
-但这种方法也有它的局限，它不能复制函数和 undefined 值，也不能复制循环引用的对象。
+1. 对象中有字段值为 `undefined`，转换后字段会直接消失
+2. 对象如果有字段值为 `RegExp` 对象，转换后字段值会变成 `{}`
+3. 对象如果有字段值为 `NaN`、`+-Infinity`，转换后字段值变成 `null`
+4. 对象如果有 `环引用`，转换直接报错。
 
-对于更复杂的需求，你可能需要使用一些库，如 lodash 的 `_.cloneDeep` 方法，或者手动实现深拷贝。
+对于更复杂的对象，你可以使用第三方库如 `lodash` 的 `_.cloneDeep` 方法。
 
-深拷贝是 JavaScript 中一个重要的概念，理解它会帮你避免很多关于对象操作的常见问题。
+## 总结
+
+这一讲，我们介绍了 JavaScript 中的引用类型，了解了如何复制值类型和引用类型的变量，并且探讨了深拷贝的方法和其局限性。在 JavaScript 编程中，理解值类型和引用类型的区别以及如何进行正确的复制是非常重要的。
+
