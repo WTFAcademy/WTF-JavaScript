@@ -59,4 +59,4 @@ async function getUser() {
 }
 
 // 调用异步函数
-getUser();
+getUser();//2s后输出 User: {id: 1, name: 'John'}
