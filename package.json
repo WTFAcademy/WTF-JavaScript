@@ -1,0 +1,12 @@
+{
+    "name": "wtf-javascript",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "mocha"
+    },
+    "dependencies": {
+        "chai": "^4.3.7",
+        "jest": "^29.5.0",
+        "mocha": "^10.2.0"
+    }
+}
