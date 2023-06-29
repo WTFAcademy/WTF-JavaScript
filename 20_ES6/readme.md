@@ -50,6 +50,23 @@ let name = 'Alice';
 console.log(`Hello, ${name}!`);  // 输出 "Hello, Alice!"
 ```
 
+## 扩展运算符
+
+ES6中可以通过三个点（...）将一个可迭代对象（如数组或字符串）展开，将其元素或字符序列分别提取出来，用于函数调用、数组字面量等场景。
+
+```javascript
+function addNumbers(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+// 使用扩展运算符将数组中的元素展开作为函数的参数
+const result = addNumbers(...numbers);
+
+console.log(result); // 输出: 6
+```
+
 ## 解构赋值
 
 解构赋值允许我们将数组或对象的属性赋值给单独的变量。
@@ -67,18 +84,32 @@ console.log(x, y);  // 输出 10 20
 ES6 引入了 Promises，它提供了一种更好的方式来处理异步操作。此外，ES6 也引入了 async/await 语法，使得异步代码更像同步代码。
 
 ```javascript
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
-async function fetchData() {
-  let response = await fetch('https://api.example.com/data');
-  let data = await response.json();
-  console.log(data);
+// 使用Promise封装一个异步操作
+function fetchUser() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const user = { id: 1, name: 'John' };
+      resolve(user);
+    }, 2000);
+  });
 }
-fetchData();
+
+// 使用async/await来处理异步任务
+async function getUser() {
+  try {
+    const user = await fetchUser();
+    console.log('User:', user);
+  } catch (error) {
+    console.log('Error:', error);
+  }
+}
+
+// 调用异步函数
+getUser();
 ```
 
-这只是 ES6 的一部分特性。ES6 还引入了许多其他新特性，如类（class），模块（module），生成器（generator），迭代器（iterator），Symbol 类型，新的数据结构如 Map 和 Set，以及许多
+## 总结
 
-新的数组和对象的方法。ES6 的所有这些特性都使 JavaScript 成为一个更强大，更现代化的编程语言。
+以上只是 ES6 的一部分特性。ES6 还引入了许多其他新特性，如类（class），模块（module），生成器（generator），迭代器（iterator），Symbol 类型，新的数据结构如 Map 和 Set，以及许多新的数组和对象的方法。
+
+ES6 的所有这些特性都使 JavaScript 成为一个更强大，更现代化的编程语言。
