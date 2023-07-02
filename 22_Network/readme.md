@@ -10,7 +10,50 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
-在现代的 Web 开发中，从客户端向服务器发送请求以获取或发送数据是非常常见的操作。在 JavaScript 中，有多种方法可以用来发送网络请求，包括 AJAX，Fetch API 和 axios。在本章，我们将对这些技术进行简单的介绍。
+在这一章节，我们将讨论如何使用 JavaScript 发送网络请求。重点关注 GET 和 POST 请求，并介绍如何使用 AJAX，Fetch API 和 axios 发送这些请求。
+
+## GET 请求
+
+GET 请求是最常见的 HTTP 请求类型，通常用于获取服务器上的数据。
+
+在 JavaScript 中，可以使用 `fetch` 函数发送 GET 请求，如下例所示：
+
+```javascript
+fetch('https://api.github.com/search/users?q=amazingang', {
+  method: 'GET',
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => console.error('Error:', error));
+```
+
+在上述代码中，我们使用 `fetch` 函数向 URL `https://api.github.com/search/users?q=amazingang` 发送了一个 GET 请求。然后，我们使用 `.then` 来处理返回的响应并将其转换为 JSON 格式。最后，我们打印出返回的数据或捕获并打印出任何错误。
+
+## POST 请求
+
+POST 请求用于向服务器发送数据。这种请求类型通常用于提交表单。
+
+发送 POST 请求与发送 GET 请求类似，但是需要在 `fetch` 函数的第二个参数中提供一些额外的选项。具体来说，我们需要设置 `method` 为 `'POST'`，并提供一个 `body`，该 `body` 包含我们要发送的数据。
+
+以下是一个示例：
+
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    username: '0xAA',
+    password: 'pwd',
+  }),
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => console.error('Request failure:', error));
+```
+
+在上述代码中，我们向同样的 URL 发送了一个 POST 请求，但是这次我们包含了一个请求体，该请求体包含 `username` 和 `password` 两个字段的 JSON 数据。请注意，我们也设置了 `Content-Type` 头部为 `application/json`，以告诉服务器我们正在发送 JSON 数据。
 
 ## AJAX
 
