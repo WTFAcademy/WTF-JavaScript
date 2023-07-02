@@ -54,11 +54,11 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第19讲: 单元测试**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/19_UnitTest)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/19_UnitTest/readme.md)】
 
-<!---
-
 **第20讲: ES6**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/20_ES6)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/20_ES6/readme.md)】
 
 **第21讲: 事件循环**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/21_EventLoop)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/21_EventLoop/readme.md)】
+
+<!---
 
 **第22讲: 网络请求**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/22_Network)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/22_Network/readme.md)】
 

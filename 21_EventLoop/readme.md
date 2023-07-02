@@ -10,60 +10,58 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 ---
 
+尽管 JavaScript 是单线程的编程语言，但是它可以通过事件循环机制处理并发操作，使 JavaScript 能够进行异步处理。JavaScript 将代码分为同步任务和异步任务，通过事件循环，异步任务在等待（如网络请求）期间不会阻塞主线程，可以同时执行其他任务。
 
-在 JavaScript 中，为了管理异步操作和回调函数，有一个重要的概念叫做事件循环（Event Loop）。事件循环是 JavaScript 运行时环境（如浏览器和 Node.js）用来处理异步操作的一种机制。在这一章中，我们将探讨事件循环的两个重要组成部分：微任务和宏任务。
+## 调用栈和任务队列
 
-## 宏任务（Macrotask）
+在我们深入研究事件循环之前，我们需要理解以下两个概念：
 
-宏任务也称为任务，是由 JavaScript 运行时环境直接创建的任务，包括：
+- **调用栈（Call Stack）**：JavaScript只有一个调用栈，用于在代码执行时跟踪函数调用的位置。当函数被调用时，它被添加到堆栈的顶部。当函数返回时，它从堆栈中被移除。同步任务会直接进入调用栈。
 
-- 整个 script （主线程代码）
-- setTimeout 和 setInterval 的回调
-- setImmediate (Node.js 环境)
+- **任务队列（Task Queue）**：当异步任务（如setTimeout或fetch）完成时，它们的回调函数被添加到任务队列中。如果调用栈为空，事件循环会将这些回调函数一个接一个地移到调用栈中以便执行。
 
-运行时环境会把每一个宏任务都放入一个队列，称为宏任务队列。每次事件循环，运行时环境都会从宏任务队列中取出一个任务来执行。
+![](./img/21-1.png)
 
-## 微任务（Microtask）
 
-微任务是在当前宏任务结束后立即执行的任务。这意味着微任务的执行时机总是在当前宏任务结束和下一个宏任务开始之间。微任务包括：
+## 宏任务和微任务
 
-- Promise 的 then 和 catch 的回调
-- process.nextTick（Node.js 环境）
-- MutationObserver (浏览器环境）的回调
+在 JavaScript 的事件循环机制中，任务被分为两种类型：宏任务和微任务。
 
-与宏任务一样，所有的微任务也会被放入一个队列，称为微任务队列。不同的是，每次事件循环，运行时环境会在当前宏任务结束后，执行完所有的微任务。
+- **宏任务（Macrotask）**：由 JavaScript 引擎线程直接执行的任务，包括整个脚本（main script），setTimeout 和 setInterval 的回调，setImmediate（Node.js环境）等。
 
-## 事件循环和任务队列
+- **微任务（Microtask）**：微任务是在当前宏任务结束后立即执行的任务，包括 Promise 的 then 和 catch 的回调，process.nextTick（Node.js环境），MutationObserver的回调（浏览器环境）等。
 
-事件循环的工作原理可以简单概括为以下步骤：
+## 事件循环过程
+
+事件循环的过程可以简化为以下
+
+几个步骤：
 
 1. 从宏任务队列中取出一个任务来执行。
 2. 执行完这个任务后，执行所有的微任务。
 3. 当微任务队列清空后，进入下一次事件循环，执行下一个宏任务。
 
-这意味着微任务的优先级高于宏任务。当微任务队列中有任务时，它们会在下一个宏任务之前全部执行完。
-
-下面是一个示例，展示了宏任务和微任务的执行顺序：
+来看一个例子，展示了宏任务和微任务的执行顺序：
 
 ```javascript
-console.log('script start');  // 宏任务
+console.log('script start');  // Macrotask
 
 setTimeout(function() {
-  console.log('setTimeout');  // 宏任务
+  console.log('setTimeout');  // Macrotask
 }, 0);
 
 Promise.resolve().then(function() {
-  console.log('promise1');  // 微任务
+  console.log('promise1');  // Microtask
 }).then(function() {
-  console.log('promise2');  // 微任务
+  console.log('promise2');  // Microtask
 });
 
-console.log('script end');  // 宏任务
+console.log('script end');  // Macrotask
 ```
 
-上面的代码的输出将会是：
+上述代码的输出顺序为：
 
-```
+```js
 script start
 script end
 promise1
@@ -83,6 +81,10 @@ setTimeout
 9. 微任务执行完毕，事件循环开始处理下一个宏任务。
 10. 从宏任务队列中取出`setTimeout`的回调函数，输出 "setTimeout"。
 
-# 总结
+建议你在 [jsv9000](https://www.jsv9000.app/) 网站上体验一下事件循环的可视化，可以更直观的理解事件循环的过程。
 
-总的来说，理解微任务和宏任务以及它们在事件循环中的角色，是理解 JavaScript 异步编程的关键。
+![](./img/21-2.png)
+
+## 总结
+
+在这一讲，我们深入学习了 JavaScript 中的事件循环，包括宏任务和微任务。这是理解 JavaScript 异步编程的基础，能帮助我们更好地理解和控制代码的执行顺序。
