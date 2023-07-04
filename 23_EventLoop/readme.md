@@ -1,4 +1,4 @@
-# WTF JavaScript 极简教程 21. 事件循环
+# WTF JavaScript 极简教程 23. 事件循环
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
@@ -20,7 +20,7 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 
 - **任务队列（Task Queue）**：当异步任务（如setTimeout或fetch）完成时，它们的回调函数被添加到任务队列中。如果调用栈为空，事件循环会将这些回调函数一个接一个地移到调用栈中以便执行。
 
-![](./img/21-1.png)
+![](./img/23-1.png)
 
 
 ## 宏任务和微任务
@@ -83,7 +83,7 @@ setTimeout
 
 建议你在 [jsv9000](https://www.jsv9000.app/) 网站上体验一下事件循环的可视化，可以更直观的理解事件循环的过程。
 
-![](./img/21-2.png)
+![](./img/23-2.png)
 
 ## 总结
 

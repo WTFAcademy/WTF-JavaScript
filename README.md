@@ -56,13 +56,11 @@ node 01_HelloJavaScript/HelloJavaScript.js
 
 **第20讲: ES6**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/20_ES6)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/20_ES6/readme.md)】
 
-**第21讲: 事件循环**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/21_EventLoop)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/21_EventLoop/readme.md)】
-
-<!---
+**第21讲: Promise**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/21_Promise)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/21_Promise/readme.md)】
 
 **第22讲: 网络请求**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/22_Network)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/22_Network/readme.md)】
 
--->
+**第23讲: 事件循环**【[代码](https://github.com/WTFAcademy/WTF-JavaScript/blob/main/23_EventLoop)】【[教程](https://github.com/WTFAcademy/WTF-JavaScript/tree/main/23_EventLoop/readme.md)】
 
 ## WTF JavaScript贡献者
 <div align="center">
