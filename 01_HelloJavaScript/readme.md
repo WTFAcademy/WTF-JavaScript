@@ -56,6 +56,13 @@ JavaScript在现代Web开发中起着至关重要的作用，它是浏览器中�
 
 ## 开发工具
 
+### 0. Chrome/Edge/Safari等浏览器
+
+上文提到，JavaScript是脚本语言，这意味着浏览器可以直接运行JavaScript代码。对于简单的JavaScript代码，可以通过浏览器的控制台来编写、运行。在现代JavaScript开发中，仍有很多开发者使用这种方式来调试一些代码。
+
+![](./img/1-6.jpg)
+![](./img/1-7.jpg)
+
 ### 1. playcode.io
 
 ![](./img/1-2.png)
