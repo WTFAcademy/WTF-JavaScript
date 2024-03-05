@@ -162,4 +162,4 @@ function getBaycMetadataById(tokenId) {
 
 ## 总结
 
-这一讲我们介绍了 JavaScript 的异步编程，包括回调函数，Promise，以及重点讲的 async/await，并且利用它获取了无聊猿NFT的元数据。Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易。async/await 使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写异步代码那样编写同步代码。
+这一讲我们介绍了 JavaScript 的异步编程，包括回调函数，Promise，以及重点讲的 async/await，并且利用它获取了无聊猿NFT的元数据。Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易。async/await 使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写同步代码那样编写异步代码。
