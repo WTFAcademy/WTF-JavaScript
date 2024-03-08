@@ -118,7 +118,7 @@ function sumOdd(arr){
 }
 
 console.log(sumOdd([1, 2, 3, 4, 5])) // 应该返回 9
-console.log(sumOdd([2, 4, 6, 8, 10])) // 应该返回 30
+console.log(sumOdd([2, 4, 6, 8, 10])) // 应该返回 0
 console.log(sumOdd([1, 3, 5, 7, 9])) // 应该返回 25
 ```
 
