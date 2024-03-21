@@ -63,7 +63,7 @@ const template = `姓名 ${name}，年龄 ${age}。`;
 console.log(template); // 姓名 0xAA，年龄 18。
 ```
 
-改变 `name` 和 `age` 值改变的时候，模板字符串也会作相应改变。
+改变 `name` 和 `age` 值的时候，模板字符串也会作相应改变。
 
 ## 3. 布尔值 Boolean
 
