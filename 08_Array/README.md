@@ -9,7 +9,7 @@ WTF JavaScript 教程，帮助新人快速入门 JavaScript。
 所有代码和教程开源在 github: [github.com/WTFAcademy/WTF-Javascript](https://github.com/WTFAcademy/WTF-Javascript)
 
 ---
-这一讲，我们会介绍 Javascript 最常见的复杂类型：数组（Array)。它可以把多个数据有序的存储在一起。
+这一讲，我们会介绍 Javascript 最常见的复杂类型：数组（Array）。它可以把多个数据有序的存储在一起。
 
 ## 定义
 
@@ -124,4 +124,4 @@ console.log(sumOdd([1, 3, 5, 7, 9])) // 应该返回 25
 
 ## 总结
 
-这一讲我们介绍了 Javascript 中的数组，包括数组的定义，读取，写入，和遍历。数组是日常开发中经常用到的数据结构，我们将在后续的教程不断见到，一定要好好掌握。
+这一讲我们介绍了 JavaScript 中的数组，包括数组的定义，读取，写入，和遍历。数组是日常开发中经常用到的数据结构，我们将在后续的教程不断见到，一定要好好掌握。
