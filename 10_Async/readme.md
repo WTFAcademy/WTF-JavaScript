@@ -110,7 +110,7 @@ helloAwait()
 // hello await
 ```
 
-注意，上面的代码会等待 1 秒后输出 `Hello async`，然后才是 `hello await`。
+注意，上面的代码会等待 1 秒后输出 `Hello, JavaScript async!`，然后才是 `hello await`。
 
 ### async/await 例子
 
