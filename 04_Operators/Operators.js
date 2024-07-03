@@ -15,9 +15,9 @@ let bool1 = (x == y); // false
 let bool2 = (x != y); // true
 let bool3 = (x > y); // false
 let bool4 = (x < y); // true
-let bool5 = (x >= y); // flase
+let bool5 = (x >= y); // false
 let bool6 = (x <= y); // true
-let bool7 = (x === y); // flase
+let bool7 = (x === y); // false
 let bool8 = (x !== y); // true
 
 // 逻辑运算符
