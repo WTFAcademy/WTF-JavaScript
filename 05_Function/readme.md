@@ -1,7 +1,3 @@
----
-title: 5. 函数
----
-
 # WTF JavaScript 极简教程: 5. 函数
 
 WTF JavaScript 教程，帮助新人快速入门 JavaScript。
@@ -106,3 +102,4 @@ function TestJS05(props) {
 ## 总结
 
 这一讲，我们介绍了 JavaScript 中的函数，包括定义函数的语法和如何调用函数。函数是你编程中最好的伴侣，我们会在之后的教程中反复使用它。
+
