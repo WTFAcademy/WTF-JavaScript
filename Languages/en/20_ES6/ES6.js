@@ -7,7 +7,7 @@ if (true) {
 console.log(x); //output 10
 
 const y = 30;
-y = 40; // Error, the value of y cannot be changed
+// y = 40; // Error, the value of y cannot be changed
 
 //arrow function
 const arr = [1, 2, 3, 4];
@@ -34,8 +34,10 @@ console.log(result); // Output: 6
 let [a, b, c] = [1, 2, 3];
 console.log(a, b, c); // Output 1 2 3
 
-let {x, y} = {x: 10, y: 20};
-console.log(x, y); // Output 10 20
+{
+  let {x, y} = {x: 10, y: 20};
+  console.log(x, y); // Output 10 20
+}
 
 //Promises and asynchronous functions
 // Use Promise to encapsulate an asynchronous operation

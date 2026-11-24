@@ -24,9 +24,6 @@ function sumCall(x, y){
     const output = sum(x, y)
     return output;
 }
-const sum = function(num1,num2){
-    return num1 + num2
-}
 
 // 3. 函数表达式
 const sum1 = function(x, y){
