@@ -7,7 +7,7 @@ if (true) {
 console.log(x);  // 输出 10
 
 const y = 30;
-y = 40;  // 报错，y 的值不能被改变
+// y = 40;  // 报错，y 的值不能被改变
 
 //箭头函数
 const arr = [1, 2, 3, 4];
@@ -34,8 +34,10 @@ console.log(result); // 输出: 6
 let [a, b, c] = [1, 2, 3];
 console.log(a, b, c);  // 输出 1 2 3
 
-let {x, y} = {x: 10, y: 20};
-console.log(x, y);  // 输出 10 20
+{
+  let {x, y} = {x: 10, y: 20};
+  console.log(x, y);  // 输出 10 20
+}
 
 //Promises 和异步函数
 // 使用Promise封装一个异步操作
